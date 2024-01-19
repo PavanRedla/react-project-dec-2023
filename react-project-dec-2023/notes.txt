@@ -1,0 +1,49 @@
+React Local Setup
+=================
+1. download Nodejs and install
+   https://nodejs.org/en/download/
+
+2. check if nodejs is installed? (open cmd and run the below command)
+   node -v 
+
+3. check if NPM is installed? (NPM-Node Package Manager)
+   npm -v    
+
+   npm install -g npm@latest - run this command if 4th point doesnot work
+   
+4.  go to the folder where you want to create project(d:/sanjay/react)& run the below command	
+	npx create-react-app project1 (npx-node package executer)
+
+   If I dont want to download the create-react-app package but want to use it then we have to use npx
+
+   or if we want to download and use create-react-app then we have to follow below approach
+
+   npm i create-react-app
+   create-react-app project1
+                 
+5. go to the created project folder(project1) and start your React application
+   cd project1
+   npm start 
+  
+6. A new browser window will pop up with your newly created React App! 
+   open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
+
+please follow these steps to have react local setup
+
+node package manager is used to install any library in react js
+
+if we install node js then npm gets installed along with install
+
+react-project-dec-2023
+
+to run project in cmd we use "npm start" command and if we close cmd then project will stop working.
+
+or go to terminal in vs code and type cmd then it will go to command prompt and then type npm start
+
+shortcut to open terminal - ctrl + ` and the kill the server we need to give ctrl+c then the project will end.
+
+npm is a place where all the libraries are available to install
+
+if only a portion of page gets reloaded then it is called single page applicatin if not it is a multipage application
+
+

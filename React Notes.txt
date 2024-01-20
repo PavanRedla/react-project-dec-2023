@@ -86,9 +86,9 @@ What React is
 -It is an open-source, component based library. 
 -It is created & maintained by Facebook.
 -React is used to build single page applications.
+if only a portion of page gets reloaded then it is called single page applicatin if not it is a multipage application
 -React allows us to create reusable UI components.
 -ReactJS uses virtual DOM based mechanism to fill in data (views) in HTML DOM. 
-
 
 
 
@@ -103,19 +103,18 @@ Let's take an example:
  (It handles Dependency Injection, CSS encapsulation, httpClient, Form validation, routing etc.)
 
 
-	Framework										Library
-=========================================================================
--group of libraries to make your work easier	-performs specific, well-defined operations
--provides ready to use tools,standards			-provides reusable functions for our code
- templates for fast application development
--Collection of libraries & APIs					-collection of helper functions,objects
--cann't be easily replaceable 					-can be easily replaceable by another
--angular,vue									-jQuery,ReactJs,lodash,moment
--Hospital with full of doctors					-A doctor who specializes in one 		
+	          Framework										                        Library
+=================================================================================================
+-group of libraries to make your work easier	       -performs specific, well-defined operations
+-provides ready to use tools,standards			         -provides reusable functions for our codetemplates for fast application development
+-Collection of libraries & APIs					             -collection of helper functions,objects
+-cann't be easily replaceable 					             -can be easily replaceable by another
+-angular,vue									                       -jQuery,ReactJs,lodash,moment
+-Hospital with full of doctors					             -A doctor who specializes in one 		
 
 
 
-		React						Angular
+		React						      Angular
 ===========================================================
 1. Library-2013					 1. Framework-2009
 2. Light-weight					 2. Heavy

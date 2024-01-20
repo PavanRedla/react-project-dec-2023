@@ -50,7 +50,63 @@ React Local Setup
 6. A new browser window will pop up with your newly created React App! 
    open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
   
+  React Local Setup
+=================
+1. download Nodejs and install
+   https://nodejs.org/en/download/
+
+2. check if nodejs is installed? (open cmd and run the below command)
+   node -v 
+
+3. check if NPM is installed? (NPM-Node Package Manager)
+   npm -v    
+
+   npm install -g npm@latest - run this command if 4th point doesnot work
+   
+4.  go to the folder where you want to create project(d:/sanjay/react)& run the below command	
+	npx create-react-app project1 (npx-node package executer)
+
+   If I dont want to download the "create-react-app" package/library but want to use it then we have to use npx
+
+   or if we want to download and use create-react-app then we have to follow below approach
+
+   npm i create-react-app - this command is used to install "create-react-app" library
+   create-react-app project1 - this command is used to create project using "create-react-app" library which is installed to our system through above command
+                 
+5. go to the created project folder(project1) and start your React application
+   cd project1
+   npm start 
   
+6. A new browser window will pop up with your newly created React App! 
+   open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
+
+please follow the above 6 steps to have react local setup
+
+node package manager(npm) is used to install any library in react js
+
+if we install node js then npm also gets installed along with nodejs
+
+project name - react-project-dec-2023
+
+
+to run project in cmd we use "npm start" command and if we close cmd then project will stop working.
+
+or go to terminal in vs code and type cmd then it will go to command prompt and then type npm start
+
+shortcut to open terminal - ctrl + ` and the kill the server we need to give ctrl+c then the project will end.
+
+npm is a place where all the libraries are available to install
+
+if only a portion of page gets reloaded then it is called single page applicatin if not it is a multipage application
+
+------
+ 
+ md stands for mark
+
+ looking at readme file others can able to understand the project
+
+
+ package.json - what are the packages we use in our project 
   
 React Project with Typescript
 =============================
@@ -247,12 +303,31 @@ node_modules/	:  Provides npm packages to the entire workspace. Workspace-wide n
 public/ 		:  Only files inside the `public` folder can be referenced from the HTML
 src/			:  Source files for the root-level application project.
 .gitignore		:  Specifies intentionally untracked files that Git should ignore.
-package.json	:  Configures npm package dependencies that are available to all projects in the workspace. 
+package.json	:  Configures npm package dependencies that are available to all projects in the workspace. it stores all the dependencies, script and all other info of project
 package-lock.json : Provides version information for all packages installed into node_modules by the npm client. 
 README.md		: Introductory documentation for the application.
 
+sub package or nested dependenciess info will be stored in package-lock.json
 
 
+all the dependencies are physically stored in node_modules.
+
+node_modules folder is very big file compared to all other files. so when we share our project to anyone easily we have to delete the node_modules folder and then share it
+
+
+npm i - is the command used to get the node_modules folder back if we have package.json file
+
+src
+----
+
+all the important source code files will be there in src folder.
+
+public
+------
+
+it contains index.html, favicon, logos, manifest file.
+ 
+ ctrl+p is shortcut to search a file in vscode
 
 React Project Flow
 ==================

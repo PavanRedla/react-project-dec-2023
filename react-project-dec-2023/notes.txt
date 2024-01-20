@@ -48,3 +48,10 @@ npm is a place where all the libraries are available to install
 if only a portion of page gets reloaded then it is called single page applicatin if not it is a multipage application
 
 ------
+ 
+ md stands for mark
+
+ looking at readme file others can able to understand the project
+
+
+ package.json - what are the packages we use in our project 

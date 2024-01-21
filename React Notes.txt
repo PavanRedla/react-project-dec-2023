@@ -307,12 +307,12 @@ package.json	:  Configures npm package dependencies that are available to all pr
 package-lock.json : Provides version information for all packages installed into node_modules by the npm client. 
 README.md		: Introductory documentation for the application.
 
-sub package or nested dependenciess info will be stored in package-lock.json
+if we install one package it will not only install that package it also install related sub packages. so these related sub package or nested dependenciess info will be stored in package-lock.json
 
 
 all the dependencies are physically stored in node_modules.
 
-node_modules folder is very big file compared to all other files. so when we share our project to anyone easily we have to delete the node_modules folder and then share it
+node_modules folder is very big file compared to all other files. so when we want to share our project to anyone easily we have to delete the node_modules folder and then share it
 
 
 npm i - is the command used to get the node_modules folder back if we have package.json file

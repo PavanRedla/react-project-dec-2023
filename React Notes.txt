@@ -334,10 +334,16 @@ React Project Flow
 1. index.html  --> <div id="root"></div> (container to inject component)
 2. index.js    --> root = ReactDOM.createRoot(document.getElementById('root'));
 				   root.render(<App />)
-                   where        what
+            where        what
 3. App.js      -->  AppComponent Code
 
+rfc means react functional component which is used to create a component in react
+to install bootstrap we have run this command in command prompt
+npm i bootstrap
 
+after running this command we can find the bootstrap in package.json and also we will an entry of bootstrap in node modules.
+
+we have to import bootstarp in index.js if we want to make it work.
 
 JSX
 ===

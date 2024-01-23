@@ -343,7 +343,13 @@ npm i bootstrap
 
 after running this command we can find the bootstrap in package.json and also we will an entry of bootstrap in node modules.
 
-we have to import bootstarp in index.js if we want to make it work.
+we have to import bootstarp in index.js or App.js if we want to make it work. Below is the code we have to include.
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+Pixabay technology images gives high quality images to add into our websites
+
+we have to add bootstarp.js file in index.js to get the components work.
 
 JSX
 ===

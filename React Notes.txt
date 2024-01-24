@@ -26,29 +26,6 @@ Syllabus
 -EsLint
 ---------
 
-
-
-
-React Local Setup
-=================
-1. download Nodejs and install
-   https://nodejs.org/en/download/
-
-2. check if nodejs is installed? (open cmd and run the below command)
-   node -v 
-
-3. check if NPM is installed? (NPM-Node Package Manager)
-   npm -v    
-   
-4.  go to the folder where you want to create project(d:/sanjay/react)& run the below command	
-	npx create-react-app project1 (npx-node package executer)
-                 
-5. go to the created project folder(project1) and start your React application
-   cd project1
-   npm start 
-  
-6. A new browser window will pop up with your newly created React App! 
-   open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
   
   React Local Setup
 =================
@@ -71,7 +48,7 @@ React Local Setup
    or if we want to download and use create-react-app then we have to follow below approach
 
    npm i create-react-app - this command is used to install "create-react-app" library
-   create-react-app project1 - this command is used to create project using "create-react-app" library which is installed to our system through above command
+   create-react-app project1 - this command is used to create project using "create-react-app" library which is installed in our system through above command
                  
 5. go to the created project folder(project1) and start your React application
    cd project1
@@ -349,7 +326,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 Pixabay technology images gives high quality images to add into our websites
 
-we have to add bootstarp.js file in index.js to get the components work.
+we have to add bootstarp.js file in index.js to get the components(acrouesl, etc.,) work.
 
 JSX
 ===

@@ -1,5 +1,20 @@
 Program-1 : Hello World Without Create-react-app
 ************************************************
+
+to make the react js work we need to import two libraries (react and react Dom library) - keep the links in head tag
+
+to get the library links go to google and search react cdn links
+
+open first link - CDN Links we will get the links 
+
+React is a predefined object and it has one object called create element
+
+createElement takes 3 arguments they are:
+
+what element you want to have, how many properties you want to have (style, attribute, class), what is the content/text inside element you want to have.
+
+if the element do not have any property then we just keep {} this as second argument
+
 <html>
 <head>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -16,6 +31,8 @@ Program-1 : Hello World Without Create-react-app
 </body>
 </html>
 Note: React object is available(can be used in console like other objects)
+
+
 
 
 
@@ -40,7 +57,9 @@ Program-2 : Nested Element Without Create-react-app
 </body>
 </html>
 
+// to make your jsx code work we have to install one library called Babel
 
+// to import 
 
 Program-3 : Nested Element using JSX 
 ************************************
@@ -67,6 +86,8 @@ Program-3 : Nested Element using JSX
 </html>
 
 
+// to create a class component in vscode the shorct cut code is rcc
+
 program-4 : Component 
 **********************
 export default function Header() {
@@ -85,15 +106,36 @@ export default class Header extends Component {
 Program-5: use Bootstrap
 ***********************
 1. install bootstrap
-	npm i  bootstrap@3.3.7  (particular version)
-	       (OR)
 	npm i bootstrap			(latest version)
 	
-2. add the below line to index.js file
+2. add the below lines to index.js file
    import 'bootstrap/dist/css/bootstrap.min.css';
+   import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
+Program-5: use Bootstrap icons
+******************************
+1. install bootstrap icons library
+	npm i bootstrap-icons			(latest version)
+	
+2. import bootstrap-icons.css file in to index.js file.
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
+3. Use class names example
+    <i className="bi-alarm"></i>
+    <i className="bi-airplane" style={{fontSize: "2rem", color: "cornflowerblue" }}></i>
+
+
+How to use React-icons
+======================
+1. install react-icons
+   npm install react-icons
+2. import react-icons in component
+   import { FaEdit, FaTrash } from 'react-icons/fa';
+   import { BsFillCalendarDateFill,BsFillClockFill } from 'react-icons/bs';
+3. use the Icons
+   <FaEdit /> <FaTrash />
+   
 
 
 Program-6: React Rendering Elements

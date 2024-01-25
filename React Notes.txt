@@ -161,12 +161,25 @@ Let's take an example:
 10. UI heavy					 10. Functionality Heavy
 
 
+What is JSX?
+-----------
+JSX stands for JavaScript XML.
+
+JSX allows us to write HTML in React.
+
+JSX makes it easier to write and add HTML in React.
+
+Coding JSX
+----------
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+
+JSX converts HTML tags into react elements.
 
 
-React Features
+React Features - React is popular because of below points
 ==============
--JSX
--Components  (easy to build, easy to extend,reusable,loosly coupled)
+-JSX - Javascript 
+-Components  (easy to build, easy to extend the code, reusable, loosly coupled(one component is not dependent on another component e.g: if navbar component gets error it will not effect other components.))
 -One-way Data Binding (watchers will not be there for bindings)
 -Virtual DOM
 -Easy to learn because of its simple Design
@@ -174,35 +187,56 @@ React Features
 
 
 
-Why virtual DOM?
+Why virtual DOM? - the page performance will be better if we use virtual DOM.
 ===============
--Frequent DOM manipulations are expensive and performance heavy. 
+-Frequent DOM manipulations are expensive and performance heavy. It may leads to load the page slowly.
 -Every time the DOM changes, browser would need to recalculate the CSS, 
  run layout and repaint the web page.
 -we need a way to minimize the time it takes to repaint the screen. 
  This is where the Virtual DOM comes in.
  
  
+ DOM :- the hierarchial representation of all the HTML elements in the browser is called Document Object model
+
+inisde browser we can find the actual DOM or browser DOM in console. using actual DOM another DOM will be created that is called virtual DOM and it will store in RAM memory.
+
+ the virtual DOM will be find in RAM memory
+
+all the write operations should be done in actual DOM and all the read operations should be done in virtual DOM
+
+eg::
+read operation:
+--------------
+document.getElementById('div');
+
+
+
 What Virtual DOM is
 ===================
 -React uses virtual DOM to enhance its performance.
 -Virtual DOM is a virtual representation of the real DOM.
 -A virtual DOM is the DOM where a representation of the UI is kept in memory and synced with the DOM.
--When state changes occur, the virtual DOM is updated and the previous and current version of  virtual DOM is compared. This is called “diffing”.
+-When state changes occur, the virtual DOM is updated and the previous and current version of  virtual DOM is compared. This is called “diffing”. 
+diffing is an algorithm which compares the previous and current version of virtual DOM and after find the elements that got changed and it will only re-render that changed elements instead of rendering all the HTML elements or entire webpage.  and then virtual DOM asks the actual DOM to make the changes happened in virtual DOM.
+
 -It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.
 -React never reads from real DOM, only writes to it.
 
 
+actual DOM is not a object. only virtual DOM is an object.
+
  
 How does React Work? (Virtual DOM)
-====================
+==================================
 -A virtual DOM is a lightweight JavaScript object which is just a copy of the
  real DOM. It is a node tree that lists the elements, their attributes and content as 
  Objects and their properties.
--React creates a VIRTUAL DOM in memory.
+-React creates a VIRTUAL DOM in RAM memory.
 -Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulations, before making the changes in the browser DOM.
 -React finds out what changes have been made,and changes only what 
  needs to be changed in the actual DOM.
+
+
 -Whenever application state/props changes, 
  these are the steps that React performs in order to optimise performance.
 
@@ -247,13 +281,13 @@ React Reconciliation
 -It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
 
 
-Stack Reconciler < React-16
+Stack Reconciler < React-16 - reconcilation happens by an app called stack Reconciler.
 ================
 -Synchronous
 -works like a stack
 -cann't be interrupted
 
-Fiber Reconciler
+Fiber Reconciler > React-16
 ================
 -Fiber is the new reconciliation engine or re-implementation of core algorithm in React v16.
 -React Fiber reconciler makes it possible to divide the work into multiple units of work(incremental rendering).

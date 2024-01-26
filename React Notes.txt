@@ -163,7 +163,7 @@ Let's take an example:
 
 What is JSX?
 -----------
-JSX stands for JavaScript XML.
+JSX stands for JavaScript XML. XML stands for eXtensible Markup Language.
 
 JSX allows us to write HTML in React.
 
@@ -178,8 +178,8 @@ JSX converts HTML tags into react elements.
 
 React Features - React is popular because of below points
 ==============
--JSX - Javascript 
--Components  (easy to build, easy to extend the code, reusable, loosly coupled(one component is not dependent on another component e.g: if navbar component gets error it will not effect other components.))
+-JSX 
+-Components  (easy to build, easy to extend (the code regarding styling and all), reusable, loosly coupled(one component is not dependent on another component e.g: if navbar component gets error it will not effect other components.))
 -One-way Data Binding (watchers will not be there for bindings)
 -Virtual DOM
 -Easy to learn because of its simple Design
@@ -202,12 +202,16 @@ inisde browser we can find the actual DOM or browser DOM in console. using actua
 
  the virtual DOM will be find in RAM memory
 
-all the write operations should be done in actual DOM and all the read operations should be done in virtual DOM
+all the write operations should be done to actual DOM and all the read operations should be done from virtual DOM
 
 eg::
 read operation:
 --------------
-document.getElementById('div');
+document.getElementById('div1'); - reading the element from HTML which has an id div1
+
+write operation:
+----------------
+document.getElementById('div1').style.color=red; - manipulating the element to turn it's color to red.
 
 
 
@@ -217,7 +221,7 @@ What Virtual DOM is
 -Virtual DOM is a virtual representation of the real DOM.
 -A virtual DOM is the DOM where a representation of the UI is kept in memory and synced with the DOM.
 -When state changes occur, the virtual DOM is updated and the previous and current version of  virtual DOM is compared. This is called “diffing”. 
-diffing is an algorithm which compares the previous and current version of virtual DOM and after find the elements that got changed and it will only re-render that changed elements instead of rendering all the HTML elements or entire webpage.  and then virtual DOM asks the actual DOM to make the changes happened in virtual DOM.
+diffing is an algorithm which compares the previous and current version of virtual DOM and after find the elements that got changed then it will only re-render that changed elements (suppose if parent element get changed then definitely it's child elements also gets changed), instead of re-rendering all the HTML elements or entire webpage.  and then virtual DOM asks the actual DOM to make the changes happened in virtual DOM.
 
 -It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.
 -React never reads from real DOM, only writes to it.
@@ -229,29 +233,28 @@ actual DOM is not a object. only virtual DOM is an object.
 How does React Work? (Virtual DOM)
 ==================================
 -A virtual DOM is a lightweight JavaScript object which is just a copy of the
- real DOM. It is a node tree that lists the elements, their attributes and content as 
- Objects and their properties.
+ real DOM. It is a node tree that lists the elements, their attributes and content as  Objects and their properties. 
+ eg: const title = React.createElement('h1', {}, 'My First React Code');
+
 -React creates a VIRTUAL DOM in RAM memory.
 -Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulations, before making the changes in the browser DOM.
--React finds out what changes have been made,and changes only what 
- needs to be changed in the actual DOM.
+-React finds out what changes have been made,and changes only what needs to be changed in the actual DOM.
 
 
 -Whenever application state/props changes, 
  these are the steps that React performs in order to optimise performance.
 
 a. Generate a new Virtual DOM that represents the new state of our application.
-b. Compare the old Virtual DOM (which represents the current HTML DOM) vs the new Virtual
-   DOM.
+b. Compare the old Virtual DOM (which represents the current HTML DOM) vs the new Virtual DOM.
 c. Based on (b) find the minimum number of operations to transform the old Virtual DOM (which represents the current HTML DOM) into the new Virtual DOM.
-
 
 
 What is the difference between Shadow DOM and Virtual DOM?
 ==========================================================
 -The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. 
--The Virtual DOM is a concept implemented by libraries in JavaScript(React) on top of browser APIs.
+e.g: text box, date box,etc..
 
+-The Virtual DOM is a concept implemented by libraries in JavaScript(React) on top of browser APIs.
 
 
 ReactDOM
@@ -262,22 +265,17 @@ ReactDOM
 -ReactDOM receives those instructions from React and then efficiently updates the DOM.
 
 
-
-
 Web Browser Workflow
 ====================
 Parsing HTML to construct DOM tree --> Render Tree construction --> Layout of the Render tree -->
  -->painting the render tree.
  
 
-
-
 React Reconciliation 
 ====================
 -Reconciliation is the process through which React updates the DOM.
  (syncing the Virtual DOM to the actual DOM)
--Reconciliation is the mechanism that tracks changes in a component state and renders 
- the updated state to the screen.
+-Reconciliation is the mechanism that tracks changes in a component state and renders the updated state to the screen.
 -It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
 
 
@@ -287,14 +285,13 @@ Stack Reconciler < React-16 - reconcilation happens by an app called stack Recon
 -works like a stack
 -cann't be interrupted
 
-Fiber Reconciler > React-16
+Fiber Reconciler > React-16 - Fiber Reconciler is better than Stack Reconciler
 ================
 -Fiber is the new reconciliation engine or re-implementation of core algorithm in React v16.
 -React Fiber reconciler makes it possible to divide the work into multiple units of work(incremental rendering).
 -It sets the priority of each work, and makes it possible to pause, reuse, and abort the unit of work.
 -Fiber is Asynchronous.
--reconciliation and rendering to the DOM weren't separated, and React couldn't pause 
- its traversal to jump to other renders in between. This often resulted in lagging inputs.
+-reconciliation and rendering to the DOM weren't separated, and React couldn't pause its traversal to jump to other renders in between. -This often resulted in lagging inputs.
 -Fiber allows the reconciliation and rendering to the DOM to be split into two separate phases:
  Phase 1: render(processing)
  -----------------------

@@ -12,7 +12,7 @@ export default function App() {
       <Header />
       <Navbar />
       <Categories />
-      <Carousel/>
+      <Carousel />
       <Main />
       <Footer />
     </div>

@@ -362,10 +362,10 @@ we have to add bootstarp.js file in index.js to get the components(acrouesl, etc
 JSX
 ===
 -JSX (JavaScript Syntax Extension)is a special syntax for React that makes it easier to represent the UI.
--JSX is used to describe the structure & content of a comonent.
--JSX allows us to add the elements in DOM without any createElement() or appendChild() methods.
--JSX is transpiled to plain javascript, so it is compatible with all browsers.
--JSX looks similar to HTML but it is not HTML.
+-JSX is used to describe the structure & content of a component.
+-JSX allows us to add the elements in DOM without using createElement() or appendChild() methods.
+-JSX is transpiled to plain javascript, so it is compatible with all browsers. Javascript compiler(Babel) is used to convert JSX to plain Javascript.
+-JSX looks similar to HTML but it is not HTML. e.g: if we do not close end tag of img then it throws error in JSX.
 -JSX code we write gets transformed into React.createElement().
 -JSX is not part of browser. we need a tool(Babel)(a JavaScript compiler) 
  to transform it to valid JavaScript.
@@ -382,9 +382,17 @@ JSX
 React Without JSX
 =================
 -Code written with JSX will be converted to use React.createElement(). 
--You will not typically invoke React.createElement() directly if you are using JSX. 
+-You will not typically invoke React.createElement() directly if you are using JSX. Means, we don't use React.createElement() when we use JSX.
+Syntax:
+-------
 -React.createElement(type,[props],[...children])
--The first one is the type of element we're creating, in this case an <h1> tag.
+
+eg: 
+---
+
+React.createElement('div', {name:'myDiv'}, [myPara, mySpan])
+
+-The first one is the type of element we're creating, in this case an <div> tag.
  This could also be another React component. 
  If we're creating an HTML element, we pass in the name as a string, 
  just like we did above. If we're creating a React component, 
@@ -403,8 +411,7 @@ return React.createElement("div", {
 
 React Element
 =============
--A React element is a JavaScript object with specific properties and methods that React 
-assigns and uses internally. 
+-A React element is a JavaScript object with specific properties and methods that React assigns and uses internally. 
 -React elements are the instructions for how the browser DOM get created. 
 -When we use ReactDOM library React elements are getting changed into DOM elements. 
 -However, when we use React Native, React elements are getting changed into native UI elements of Android or iOS.

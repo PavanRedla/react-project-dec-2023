@@ -652,7 +652,7 @@ How to use React-icons
 Fragments
 ==========
 -While returning elements in JSX, we can only return 1 element at a time.
- That element can have children but we have to ensure that we are only returning 1 element at a time, or else we will get a syntax error. (ex: a function can return 1 value)
+ That element can have children but we have to ensure that we are only returning 1 element at a time, or else we will get a syntax error. (ex: a function can return 1 value). if there are 100 components in the project then we have to create 100 div's for the entire project. Inorder to avoid this we use React Fragments.
 -Fragments are way to render multiple elements without using a wrapper element.
 -Fragment acts as a wrapper without adding unnecessary divs to the DOM. 
 -We can use it directly from the React import, or deconstruct it.
@@ -672,7 +672,7 @@ Fragments
 		<div>I am an element!</div>
 		<button>I am another element</button>
    </>
- 
+ <> </> (empty tag) is called fragment in react. and no need to import Fragment from react when we use <> empty tag.
  
 
 CSS in React
@@ -680,7 +680,7 @@ CSS in React
 different ways to add CSS:
 1. inline CSS
 2. External CSS
-3. global css(index.css)
+3. global css(index.css) - it is a common CSS and will apply to all the components.
 4. CSS Modules
 5. Conditional CSS 
 
@@ -699,7 +699,8 @@ CSS Modules
 	<button className={styles.error}>Error Button</button>;
 -it will only apply the classname from css module even if both files have same 'error' class;
 
-
+normal css will have a extension - .css
+module css will have this extension - module.css
  
 
  

@@ -367,16 +367,13 @@ JSX
 -JSX is transpiled to plain javascript, so it is compatible with all browsers. Javascript compiler(Babel) is used to convert JSX to plain Javascript.
 -JSX looks similar to HTML but it is not HTML. e.g: if we do not close end tag of img then it throws error in JSX.
 -JSX code we write gets transformed into React.createElement().
--JSX is not part of browser. we need a tool(Babel)(a JavaScript compiler) 
- to transform it to valid JavaScript.
+-JSX is not part of browser. we need a tool(Babel)(a JavaScript compiler) to transform it to valid JavaScript.
 -JSX doesn't support void tags.
  <img>  		invalid
  <img></img>    valid
  <img /> 		valid
 -Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
 -ex: class becomes className in JSX, and tabindex becomes tabIndex.
-
-
 
 
 React Without JSX
@@ -465,7 +462,7 @@ Named Export vs Default Export
 -The name of imported module has to be the same as the name of the exported module for named exports.
 -The naming of import is completely independent in default export and we can use any name we like.
 ex: import MyReact, { MyComponent } from "react";
-           correct    wrong-namedExport
+           correct for default export    wrong-for named Export
 
 
  
@@ -524,12 +521,12 @@ json viewer
 
 React Plugins
 =============
-1. React Developer Tools
-2. React-sight
+1. React Developer Tools - to identify the DOM strucute and all components in browser. If we install this react dev tools then one field called components will show in console and if we click the components it will show all the components of the DOM.
+
+2. React-sight - it is also same as react dev tools but it was stopped.
+
 3. Redux DevTools
    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
-
 
 
 
@@ -548,9 +545,7 @@ React.StrictMode
      <StrictMode>
 		<App />
      </StrictMode>
-Note: StrictMode renders components twice (on dev but not production) in order to
-      detect any problems with our code and warn us about them.
-
+Note: StrictMode renders components twice (on dev but not production) in order to detect any problems with our code and warn us about them. running twice( one time running for finding the errors and another time for producing output) 
 
 
 
@@ -561,29 +556,28 @@ Component
 -A Component Represents a part of the User Interface.
 -Components are Re-Usable and can be nested inside other component.
 -A React application contains a tree of components.
--React components let you split the UI into independent, reusable pieces, 
-  and think about each piece in isolation. 
+-React components let you split the UI into independent, reusable pieces, and think about each piece in isolation. 
 
 
 2 types Of Component
 ====================
-1. Functional Component ( stateless/presentational/dumb)
+1. Functional Component ( stateless/presentational/dumb) - if a variable is holding a value and it is changing on performing an operation on it then it the variable is having a state, otherwise it is called stateless.
+
 2. Class Component ( statefull)
 
--The simplest way to define a component in React is to write a JavaScript function:
+-The simplest way to define a component in React is to write a JavaScript function: (Functional Component)
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
--we can also use the ES6 class syntax to write components
+-we can also use the ES6 class syntax to write components ( class Component)
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
   }
 }
 
--A functional component is just a plain JavaScript function which accepts props 
- as an argument and returns a React element.
+-A functional component is just a plain JavaScript function which accepts props as an argument and returns a React element.
 -Functional Components are faster and much simpler than Class Components.
 -Functional components are very useful in React, especially when you want to isolate state management from the component. That’s why they are often called stateless components.
  
@@ -592,16 +586,14 @@ class Welcome extends React.Component {
 -a React class component must define a render method that specifies how the component renders to the DOM. 
 -The render method returns React nodes, which can be defined using JSX syntax as HTML-like tags
 -React requires that the first letter of a component class be capitalized. 
-  This is required because based on capitalization JSX can tell the difference between 
-  an HTML tag and a component instance. If the first letter of a name is capitalized, 
-  then JSX realizes it’s a component instance; if not, then it’s an HTML tag.
+  This is required because based on capitalization JSX can tell the difference between an HTML tag and a component instance. If the first letter of a name is capitalized, then JSX realizes it’s a component instance; if not, then it’s an HTML tag.
 
 
-	Functional Component			Class Component
-	---------------------			---------------
-1. No 'this' keyword				1. More feature rich
-2. solution without state			2. Maintain own private data- state
-3. Mainly for UI 					3. Complex UI Logic
+	Functional Component	<16		        Class Component
+	---------------------	      		  ---------------
+1. No 'this' keyword				        1. More feature rich
+2. solution without state			      2. Maintain own private data- state
+3. Mainly for UI 					          3. Complex UI Logic
 4. Stateless/dumb/Presentational    4. Provide Life cycle hooks
 	
 
@@ -609,15 +601,11 @@ class Welcome extends React.Component {
 
 When to use a Class Component over a Function Component?
 ========================================================
--If the component needs state or lifecycle methods then use class component 
- otherwise use function component. 
--However, from React 16.8 with the addition of Hooks, we can use state , 
- lifecycle methods and other features  that were only available in class component 
- in function component also. 
+-If the component needs state or lifecycle methods then use class component otherwise use function component. 
+-However, from React 16.8 with the addition of Hooks, we can use state , lifecycle methods and other features that were only available in class component in function component also. 
 -So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.
 
 
- 
 
 How to Use Bootstrap in a React application
 ===========================================

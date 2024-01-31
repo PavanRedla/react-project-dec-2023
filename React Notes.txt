@@ -726,6 +726,7 @@ Ternary-  		<div>{flag ? <h1>Helllloooooo</h1> : null}</div>
 Short Circuit-  <div>{flag && <h1>Helllloooooo</h1>}</div>	
 
 
+For each method cannot return anything hence, map method is used in iterating array.
 
 List Items - Lists and Keys
 ===========================

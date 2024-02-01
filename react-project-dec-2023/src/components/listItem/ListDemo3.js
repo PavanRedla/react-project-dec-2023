@@ -1,6 +1,5 @@
 import React from "react";
 import products from "./products.json";
-import "./listDemo3.css";
 
 export default function ListDemo3() {
   return (

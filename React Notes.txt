@@ -675,6 +675,11 @@ Fragments
  <> </> (empty tag) is called fragment in react. and no need to import Fragment from react when we use <> empty tag.
  
 
+Data Binding
+============
+
+Binding/Displaying the variable value  in UI is called Data Binding.
+
 CSS in React
 ============
 different ways to add CSS:

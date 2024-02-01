@@ -256,14 +256,28 @@ export default App;
 
 program-9 display Image
 *************************
+
+First approach
+==============
+
 1. place the image inside 'public' folder
 2. use it in HTML file
    <img src='images/sachin.jpg' />   
 		(OR)
+
+second approach
+===============
+
+if we do not place the img in public folder and if we place the img in the same folder in which js file is residing then we have to use this below approach to use that img present in the same folder.
+suppose carousel folder have carousel.js file and image (img2). so img2 is not present in public folder. so we cannot use it directly as shown in first approach mentioned above.
+
 1. import sachin from './sachin.jpg'; (OR) const sachin = require('./sachin.jpg') 
+
+e.g: const img2 = require('./img2.jpg') 
+
 2. <img src={sachin} />
 
-
+e.g: <img src={img2} className="d-block w-100" alt="..." />
 
 
 program-10 : CSS

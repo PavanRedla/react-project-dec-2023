@@ -755,7 +755,7 @@ List Items - Lists and Keys
  
 read data from a JSON file
 ==========================
-1. create a JSON file (employees.json/products.json/countries.json)
+1. create a JSON file (e.g: employees.json or products.json or countries.json)
    [ {},{},{} ]
 2. import listData from './countries.json'
 3. use 'listData' in JSX

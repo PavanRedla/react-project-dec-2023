@@ -35,6 +35,8 @@ Syllabus
 2. check if nodejs is installed? (open cmd and run the below command)
    node -v 
 
+if we install node js then npm also gets installed along with nodejs
+
 3. check if NPM is installed? (NPM-Node Package Manager)
    npm -v    
 
@@ -70,7 +72,7 @@ to run project in cmd we use "npm start" command and if we close cmd then projec
 
 or go to terminal in vs code and type cmd then it will go to command prompt and then type npm start
 
-shortcut to open terminal - ctrl + ` and the kill the server we need to give ctrl+c then the project will end.
+shortcut to open terminal - ctrl + ` and to kill the server we need to give ctrl+c then the project will end.
 
 npm is a place where all the libraries are available to install
 
@@ -78,7 +80,7 @@ if only a portion of page gets reloaded then it is called single page applicatin
 
 ------
  
- md stands for mark
+ md stands for Markdown documentation
 
  looking at readme file others can able to understand the project
 
@@ -98,7 +100,7 @@ React Project with Typescript
 create-react-app
 ================
 -It is a React application boilerplate generator created by Facebook. 
--This CLI tool installs React,ReactDOM & other libraries required for a react project.
+-This CLI (command line interface) tool installs React,ReactDOM & other libraries required for a react project.
 -It provides a development environment configured for ease-of-use with minimal setup.
 -It creates a frontend build pipeline. Under the hood, it uses Babel and webpack.
 
@@ -128,8 +130,7 @@ if only a portion of page gets reloaded then it is called single page applicatin
 React is NOT a framework
 ========================
 -React is a library and not a framework.
--The difference between a library and a framework is that a library only helps 
- you in one aspect whereas a framework helps you in many aspects. 
+-The difference between a library and a framework is that a library only helps you in one aspect whereas a framework helps you in many aspects. 
 Let's take an example:
 -React is a library because it only takes care of your UI.
 -Angular, on the other hand, is a framework because it handles much more than the UI 
@@ -190,8 +191,7 @@ React Features - React is popular because of below points
 Why virtual DOM? - the page performance will be better if we use virtual DOM.
 ===============
 -Frequent DOM manipulations are expensive and performance heavy. It may leads to load the page slowly.
--Every time the DOM changes, browser would need to recalculate the CSS, 
- run layout and repaint the web page.
+-Every time the DOM changes, browser would need to recalculate the CSS, run layout and repaint the web page.
 -we need a way to minimize the time it takes to repaint the screen. 
  This is where the Virtual DOM comes in.
  
@@ -232,8 +232,7 @@ actual DOM is not a object. only virtual DOM is an object.
  
 How does React Work? (Virtual DOM)
 ==================================
--A virtual DOM is a lightweight JavaScript object which is just a copy of the
- real DOM. It is a node tree that lists the elements, their attributes and content as  Objects and their properties. 
+-A virtual DOM is a lightweight JavaScript object which is just a copy of the real DOM. It is a node tree that lists the elements, their attributes and content as  Objects and their properties. 
  eg: const title = React.createElement('h1', {}, 'My First React Code');
 
 -React creates a VIRTUAL DOM in RAM memory.
@@ -241,8 +240,7 @@ How does React Work? (Virtual DOM)
 -React finds out what changes have been made,and changes only what needs to be changed in the actual DOM.
 
 
--Whenever application state/props changes, 
- these are the steps that React performs in order to optimise performance.
+-Whenever application state/props changes, these are the steps that React performs in order to optimise performance.
 
 a. Generate a new Virtual DOM that represents the new state of our application.
 b. Compare the old Virtual DOM (which represents the current HTML DOM) vs the new Virtual DOM.

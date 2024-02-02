@@ -692,7 +692,7 @@ different ways to add CSS:
 
 CSS Modules
 ===========
--This approach is designed to fix the problem of the global scope in CSS. i.e, if we have two components ( header component and footer component) and if we write footer.css and imported in header component js file then it should apply only to header component but instead it applies to footer.js file as well if footer.js file have same class name used which header.js file is using.
+-This approach is designed to fix the problem of the global scope in CSS. i.e, if we have two components ( header component and footer component) and if we write footer.css and imported in footer component js file then it should apply only to footer component but instead it applies to header.js file as well if header.js file have same class name used which header.js file is using.
 
 -A CSS Module is a CSS file in which all class names are scoped locally by default.
 -CSS Modules allow to use the same CSS class name in different files without worrying about naming clashes.

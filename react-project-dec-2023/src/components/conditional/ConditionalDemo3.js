@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function ConditionalDemo3() {
-    let cars = ['tata', 'honda', 'maruti']
+  let cars = ["tata", "honda", "maruti"];
 
-    return <div>
-       <h2>You have {cars.length} cars</h2>
+  return (
+    <div>
+      <h2>You have {cars.length} cars</h2>
     </div>
+  );
 }

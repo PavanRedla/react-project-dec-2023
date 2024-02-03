@@ -271,8 +271,7 @@ Parsing HTML to construct DOM tree --> Render Tree construction --> Layout of th
 
 React Reconciliation 
 ====================
--Reconciliation is the process through which React updates the DOM.
- (syncing the Virtual DOM to the actual DOM)
+-Reconciliation is the process through which React updates the DOM. (syncing the Virtual DOM to the actual DOM)
 -Reconciliation is the mechanism that tracks changes in a component state and renders the updated state to the screen.
 -It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
 
@@ -306,14 +305,14 @@ Fiber Reconciler > React-16 - Fiber Reconciler is better than Stack Reconciler
 React Project - Folder Structure
 ================================
 node_modules/	:  Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
-public/ 		:  Only files inside the `public` folder can be referenced from the HTML
-src/			:  Source files for the root-level application project.
+public/ 		  :  Only files inside the `public` folder can be referenced from the HTML
+src/			    :  Source files for the root-level application project.
 .gitignore		:  Specifies intentionally untracked files that Git should ignore.
-package.json	:  Configures npm package dependencies that are available to all projects in the workspace. it stores all the dependencies, script and all other info of project
+package.json	:  Configures npm package dependencies that are available to all projects in the workspace. it stores all            the dependencies, script and all other info of project
 package-lock.json : Provides version information for all packages installed into node_modules by the npm client. 
 README.md		: Introductory documentation for the application.
 
-if we install one package it will not only install that package it also install related sub packages. so these related sub package or nested dependenciess info will be stored in package-lock.json
+if we install one package it will not only install that package it also installs related sub packages. so these related sub package or nested dependenciess info will be stored in package-lock.json
 
 
 all the dependencies are physically stored in node_modules.
@@ -344,6 +343,7 @@ React Project Flow
 3. App.js      -->  AppComponent Code
 
 rfc means react functional component which is used to create a component in react
+
 to install bootstrap we have run this command in command prompt
 npm i bootstrap
 
@@ -355,7 +355,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 Pixabay technology images gives high quality images to add into our websites
 
-we have to add bootstarp.js file in index.js to get the components(acrouesl, etc.,) work.
+we have to add bootstarp.js file in index.js to get the components(carouesl, etc.,) work.
 
 JSX
 ===

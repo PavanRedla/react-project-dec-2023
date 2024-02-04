@@ -34,7 +34,7 @@ export default function Main() {
       {/* <CounterDemo1 /> */}
       {/* <CounterDemo2/> */}
       {/* <CounterDemo3 /> */}
-      {/* <GreetDemo1 name='sanjay' msg='Good Morning' /> */}
+      {/* <GreetDemo1 name="sanjay" msg="Good Morning" /> */}
     </div>
   );
 }

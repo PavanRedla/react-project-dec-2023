@@ -1,15 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 export default function CounterDemo3() {
-    let [counter, updateCounter] = useState(0);
+  let [counter, updateCounter] = useState(0);
 
-    let increment = () => {
-        updateCounter(++counter)
-        console.log(counter)
-    }
+  //   useState is a predefined function in react also called as hook and using use state function we can create state variable. state variables are updated in the UI unlike class and function variables.
 
-    return <>
-        <p>Counter value is {counter}</p>
-        <button onClick={increment}>Increment</button>
+  // useState methods take a default value as a argument. It return array of 2 items called state variable (counter) and setter function (updateCounter).
+
+  let increment = () => {
+    updateCounter(++counter);
+    console.log(counter);
+  };
+
+  return (
+    <>
+      <p>Counter value is {counter}</p>
+      <button onClick={increment}>Increment</button>
     </>
+  );
 }
+
+// useState is a predefined function in react also called as hook and using use state function we can create state variable. state variables are updated in the UI unlike class and function variables.
+
+// useState methods take a default value as a argument. It return array of 2 items called state variable and setter function.

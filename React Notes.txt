@@ -789,11 +789,9 @@ forceUpdate
 -React components will only re-render when there are changes to props or state.	
 -Updating the class/function variable does not trigger a re-render.	
 -Its our responsibility of triggering the re-render when our class data changes.	
--Normally we should try to avoid all uses of forceUpdate() and only read from 
- this.props and this.state in render().
+-Normally we should try to avoid all uses of forceUpdate() and only read from this.props and this.state in render().
 -In class components,this.forceUpdate() is used to force a re-render.
 -In Functional components,there is no concept of force re-render.
-
 
 
 props
@@ -818,7 +816,7 @@ props
 2.data with props are being passed in a uni-directional flow. (one way from parent to child)
 
 <img src="abc.jpg" alt="someimage"/>
-img - tag, 
+img - tag,  src and alt are attributes, abc.jpg and someimage are attribute values.
 
 <header src="abc.jpg" alt="someimage"/>
 header - component , src and alt are prop names, abc.jpg and someimage are propvalues

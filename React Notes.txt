@@ -812,7 +812,7 @@ props
  props.propName; (Functional Component)
 
 
-1.They are immutable. data coming from the parent should not be changed by child components. we will get an error if you try to change their value.
+1.They are immutable. data coming from the parent should not be changed by child components. we will get an error if you try to change their value. we cannot update props variable.
 2.data with props are being passed in a uni-directional flow. (one way from parent to child)
 
 <img src="abc.jpg" alt="someimage"/>

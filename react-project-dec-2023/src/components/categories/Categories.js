@@ -4,6 +4,14 @@ import Category from "./Category";
 
 export default function Categories() {
   let categoriesArr = [
+    // {
+    //   name: 123, // passing numerical value which will throw error in console as we set the propType of name to string in category.js file.
+    //   img: "https://rukminim2.flixcart.com/flap/72/72/image/29327f40e9c4d26b.png?q=100",
+    // },
+    // {
+    //   name: "Grocery",
+    //   // we are not specifying img variable so no img value will be passed to category.js file so img value will be undefined for this particlar category. we have to make propType required in order to throw error if all the values are not passed to child category.
+    // },
     {
       name: "Grocery",
       img: "https://rukminim2.flixcart.com/flap/72/72/image/29327f40e9c4d26b.png?q=100",

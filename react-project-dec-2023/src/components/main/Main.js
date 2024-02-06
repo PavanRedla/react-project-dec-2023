@@ -16,6 +16,7 @@ import CounterDemo1 from "../state/CounterDemo1";
 import CounterDemo2 from "../state/CounterDemo2";
 import CounterDemo3 from "../state/CounterDemo3";
 import GreetDemo1 from "../props/GreetDemo1";
+import Addition from "../demo/Addition";
 
 export default function Main() {
   return (
@@ -34,7 +35,18 @@ export default function Main() {
       {/* <CounterDemo1 /> */}
       {/* <CounterDemo2/> */}
       {/* <CounterDemo3 /> */}
-      {/* <GreetDemo1 name="sanjay" msg="Good Morning" /> */}
+      <GreetDemo1 name="sanjay" msg="Good Morning">
+        <div>
+          In between the start and end tag of GreetDemo1 tags whatever the HTML
+          content is present it will be passed or goes to child component (i.e.,
+          GreetDemo1 component where we mention this.props.children). we have
+          written HTML code of div tag so this div tag will be passed to line
+          number 45.
+        </div>
+      </GreetDemo1>
+      {/* <Addition num1={10} num2={20}/> */}
+
+      {/*  suppose if we have a compoenent and inside that component what HTMl will be shown if that is decided by the parent then props.children will be shown. */}
     </div>
   );
 }

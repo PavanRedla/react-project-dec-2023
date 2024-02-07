@@ -44,9 +44,45 @@ export default function Main() {
           number 45.
         </div>
       </GreetDemo1>
-      {/* <Addition num1={10} num2={20}/> */}
 
       {/*  suppose if we have a compoenent and inside that component what HTMl will be shown if that is decided by the parent then props.children will be shown. */}
+
+      {/* <Addition num1={10} num2={20}/> */}
+      {/* <MyModal>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </MyModal> */}
+
+      {/* <MyModal modalTitle={'This is My Title'} name={props.name}>
+            <>
+                <table className='table table-bordered'>
+                    <tbody>
+                        <tr>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                        </tr>
+                        <tr>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                        </tr>
+                        <tr>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                            <td>sdfjk</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>dsafkhjhj</p>
+            </>
+        </MyModal> */}
     </div>
   );
 }

@@ -23,6 +23,9 @@ import ToggleDemo1 from "../state/ToggleDemo1";
 import ToggleDemo2 from "../state/ToggleDemo2";
 import PasswordDemo1 from "../state/PasswordDemo1";
 import RemainingCharacter from "../state/RemainingCharacter";
+import StateDropDown from "../state/StateDropDown";
+import Folder from "../FolderExplorer/Folder";
+import folderData from "../FolderExplorer/folderData.json";
 
 export default function Main() {
   return (
@@ -93,7 +96,9 @@ export default function Main() {
       {/* <ToggleDemo1 /> */}
       {/* <ToggleDemo2 /> */}
       {/* <PasswordDemo1 /> */}
-      <RemainingCharacter />
+      {/* <RemainingCharacter /> */}
+      {/* <StateDropDown /> */}
+      <Folder folderInfo={folderData} />
     </div>
   );
 }

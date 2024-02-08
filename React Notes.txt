@@ -943,8 +943,8 @@ States
  
 State in Class Component
 ========================
--class components have a state property that holds their state. 
- They provide a setState() method we can use to update the state.
+-class components have a state object where all the state variables are declared. 
+- To update state variables setState() method should be used.
 -State object is usually initialized inside the constructor in class components.
 -UI will not Re-render when we change state directly, setState() should be used.
   this.counter = this.counter + 1; // re-render won't happpen
@@ -953,9 +953,11 @@ State in Class Component
  it ensures that render() gets called.
 -If a piece of code needs to be executed only after the state has been updated, then 
  place that code in the callback function which is the second arguement to setState()
+ Syntax:-  setState( StateObject, callbackFunction );
  ex:-  setState( {} , ()=>{} );
+- setState method takes two arguments 
  
- 
+
 Note:
 -----
 -setState() actions are asynchronous. setState() doesn’t immediately mutate this.state.

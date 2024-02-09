@@ -26,6 +26,9 @@ import RemainingCharacter from "../state/RemainingCharacter";
 import StateDropDown from "../state/StateDropDown";
 import Folder from "../FolderExplorer/Folder";
 import folderData from "../FolderExplorer/folderData.json";
+import SweetAlertDemo from "../demo/SweetAlertDemo";
+import ReactModalDemo from "../demo/ReactModalDemo";
+import ProductList from "../listItem/ProductList";
 
 export default function Main() {
   return (
@@ -98,8 +101,11 @@ export default function Main() {
       {/* <PasswordDemo1 /> */}
       {/* <RemainingCharacter /> */}
       {/* <StateDropDown /> */}
-      <Additiontwo />
+      {/* <Add /> */}
       {/* <Folder folderInfo={folderData} /> */}
+      {/* <SweetAlertDemo /> */}
+      {/* <ReactModalDemo /> */}
+      <ProductList />
     </div>
   );
 }

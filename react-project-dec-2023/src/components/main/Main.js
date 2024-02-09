@@ -97,8 +97,8 @@ export default function Main() {
       {/* <ToggleDemo2 /> */}
       {/* <PasswordDemo1 /> */}
       {/* <RemainingCharacter /> */}
-      {/* <StateDropDown /> */}
-      <Folder folderInfo={folderData} />
+      <StateDropDown />
+      {/* <Folder folderInfo={folderData} /> */}
     </div>
   );
 }

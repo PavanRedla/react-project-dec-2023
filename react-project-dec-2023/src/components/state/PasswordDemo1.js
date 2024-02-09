@@ -1,15 +1,22 @@
-/* 
-import React, { useState } from 'react'
-export default function PasswordDemo1() {
-  const [flag, setFlag] = useState(true);
-  const toggle = () => {
-    setFlag(!flag)
-  }
-  return <>
-  <input type={flag ? 'password' : 'text'} />
-  <input type='checkbox' onClick={toggle} /> {flag ? 'SHOW' : 'HIDE'} Password
-  </>
-} */
+// function component
+
+// import React, { useState } from "react";
+// export default function PasswordDemo1() {
+//   const [flag, setFlag] = useState(true);
+
+//   const toggle = () => {
+//     setFlag(!flag);
+//   };
+//   return (
+//     <>
+//       <input type={flag ? "password" : "text"} />
+//       <input type="checkbox" onClick={toggle} /> {flag ? "SHOW" : "HIDE"}
+//       Password
+//     </>
+//   );
+// }
+
+// class component
 
 import React, { Component } from "react";
 

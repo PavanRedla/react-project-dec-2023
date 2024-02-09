@@ -944,7 +944,7 @@ States
 State in Class Component
 ========================
 -class components have a state object where all the state variables are declared. 
-- To update state variables setState() method should be used.
+- To update state variables, setState() method should be used.
 -State object is usually initialized inside the constructor in class components.
 -UI will not Re-render when we change state directly, setState() should be used.
   this.counter = this.counter + 1; // re-render won't happpen
@@ -955,7 +955,7 @@ State in Class Component
  place that code in the callback function which is the second arguement to setState()
  Syntax:-  setState( StateObject, callbackFunction );
  ex:-  setState( {} , ()=>{} );
-- setState method takes two arguments 
+- setState method takes two arguments - StateObject, callbackFunction 
  
 
 Note:
@@ -989,14 +989,14 @@ State in Functional Component
 	 setCount(count + 1);
 	
 
-		Props        		  vs 					State
+		Props        		               vs 					State
 =======================================================================
-1. Props are immutable.					1. State is mutable/modifiable.
-2. pass data from parent component 		2. contains own data & changes over time
+1. Props are immutable.					           1. State is mutable/modifiable.
+2. pass data from parent component 		     2. contains own data & changes over time
    to child component
-3. communicate between components		3. rendering dynamic changes
-4. props - Functional Comp				4. useState()      - Functional Comp
-   this.props - class comp		  		   this.state={}   - Class Comp
+3. communicate between components		       3. rendering dynamic changes
+4. props - Functional Comp				         4. useState()      - Functional Comp
+   this.props - class comp		  		          this.state={}   - Class Comp
 
 
 

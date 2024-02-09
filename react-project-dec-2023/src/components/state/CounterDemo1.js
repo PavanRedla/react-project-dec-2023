@@ -23,7 +23,7 @@ export default class CounterDemo1 extends Component {
   }
 }
 
-// if we want to print the variable in class or function component then we have to use this.variable
+// if we want to print the variable in class component then we have to use this.variable
 
 // Ui will print or rerender only the state variables.
 

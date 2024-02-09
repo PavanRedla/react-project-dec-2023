@@ -7,12 +7,6 @@ export default function Addition() {
   return (
     <>
       <h2>Adding two Numbers</h2>
-      <input type="text" placeholder="Enter First Number" />
-      {/* Enter First Number:
-      </input> */}
-      <input type="number" placeholder="Enter First Number">
-        Enter Second Number:
-      </input>
     </>
   );
 }

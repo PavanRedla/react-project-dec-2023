@@ -29,6 +29,7 @@ import folderData from "../FolderExplorer/folderData.json";
 import SweetAlertDemo from "../demo/SweetAlertDemo";
 import ReactModalDemo from "../demo/ReactModalDemo";
 import ProductList from "../listItem/ProductList";
+import SumDemo from "../state/SumDemo";
 
 export default function Main() {
   return (
@@ -101,11 +102,11 @@ export default function Main() {
       {/* <PasswordDemo1 /> */}
       {/* <RemainingCharacter /> */}
       {/* <StateDropDown /> */}
-      {/* <Add /> */}
+      <SumDemo />
       {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
-      <ProductList />
+      {/* <ProductList /> */}
     </div>
   );
 }

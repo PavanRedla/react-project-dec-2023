@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import productsArr from "./products.json";
 import SearchBar from "react-js-search";
+import ReactPaginate from "react-paginate";
+import "./ProductList.css";
 
 export default function ProductList() {
   const [filteredProducts, setFilteredProducts] = useState(productsArr);
@@ -14,6 +16,18 @@ export default function ProductList() {
     setFilteredProducts([...sortedProducts]);
   };
 
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 4;
+
+  const endOffset = itemOffset + itemsPerPage;
+  const products = filteredProducts.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % filteredProducts.length;
+    setItemOffset(newOffset);
+  };
+
   return (
     <>
       <div className="container">
@@ -23,7 +37,7 @@ export default function ProductList() {
               onSearchTextChange={(term, filteredData) => {
                 setFilteredProducts([...filteredData]);
               }}
-              //   onSearchButtonClick={onSearchClick}
+              // onSearchButtonClick={onSearchClick}
               placeHolderText={"Search here..."}
               data={productsArr}
             />
@@ -38,7 +52,7 @@ export default function ProductList() {
           </div>
         </div>
         <div className="row mt-3">
-          {filteredProducts.map((product) => {
+          {products.map((product) => {
             return (
               <div className="col-sm-3 mb-1" key={product.id}>
                 <div className="card">
@@ -68,6 +82,21 @@ export default function ProductList() {
               </div>
             );
           })}
+
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="next >"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel="< previous"
+            renderOnZeroPageCount={null}
+            containerClassName="pagination"
+            pageLinkClassName="page-num"
+            previousLinkClassName="page-num"
+            nextLinkClassName="page-num"
+            activeLinkClassName="active"
+          />
         </div>
       </div>
     </>

@@ -30,6 +30,7 @@ import SweetAlertDemo from "../demo/SweetAlertDemo";
 import ReactModalDemo from "../demo/ReactModalDemo";
 import ProductList from "../listItem/ProductList";
 import SumDemo from "../state/SumDemo";
+import ToDoCRUD from "../ToDoCRUD/ToDoCRUD";
 
 export default function Main() {
   return (
@@ -106,7 +107,8 @@ export default function Main() {
       {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
-      <ProductList />
+      {/* <ProductList /> */}
+      <ToDoCRUD />
     </div>
   );
 }

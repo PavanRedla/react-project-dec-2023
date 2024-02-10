@@ -102,11 +102,11 @@ export default function Main() {
       {/* <PasswordDemo1 /> */}
       {/* <RemainingCharacter /> */}
       {/* <StateDropDown /> */}
-      <SumDemo />
+      {/* <SumDemo /> */}
       {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
-      {/* <ProductList /> */}
+      <ProductList />
     </div>
   );
 }

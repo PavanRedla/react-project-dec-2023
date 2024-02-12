@@ -1110,11 +1110,11 @@ Pagination
 React Events
 =============
 -React events are written in camelCase
-	onClick-correct
-	onclick-wrong
+	onClick-correct  -  used in reactJs
+	onclick-wrong - used in javascript
 -React event handlers are written inside curly braces
-	onClick={shoot}  instead of onClick="shoot()"
-	<button onClick={shoot}>Take the Shot!</button>
+	onClick={shoot}  instead of onClick="shoot()" 
+	<button onClick={shoot}>Take the Shot!</button>  // calls the function on click
 	<button onClick={shoot()}>Take the Shot!</button> //calls the function on load
 -For methods in React,the 'this' keyword should represent the component that owns the method.
 -That is why we should use arrow functions. 

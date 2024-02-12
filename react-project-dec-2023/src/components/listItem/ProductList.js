@@ -24,6 +24,9 @@ export default function ProductList() {
   const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
 
   const handlePageClick = (event) => {
+    console.log(event);
+    console.log(event.selected);
+
     const newOffset = (event.selected * itemsPerPage) % filteredProducts.length;
     setItemOffset(newOffset);
   };

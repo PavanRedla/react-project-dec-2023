@@ -32,7 +32,7 @@ import ProductList from "../listItem/ProductList";
 import SumDemo from "../state/SumDemo";
 import ToDoCRUD from "../ToDoCRUD/ToDoCRUD";
 
-export default function Main() {
+export default function Main(props) {
   return (
     <div style={{ minHeight: "400px" }}>
       {/* <Increment/> */}
@@ -59,7 +59,7 @@ export default function Main() {
         </div>
       </GreetDemo1> */}
 
-      {/*  suppose if we have a compoenent and inside that component what HTMl will be shown if that is decided by the parent then props.children will be shown. */}
+      {/*  suppose if we have a compoenent and inside that component what HTMl will be shown is should be decided by theparent then props.children will be shown. */}
 
       {/* <Addition num1={10} num2={20}/> */}
       {/* <MyModal>
@@ -73,30 +73,30 @@ export default function Main() {
             </div>
         </MyModal> */}
 
-      {/* <MyModal modalTitle={'This is My Title'} name={props.name}>
-            <>
-                <table className='table table-bordered'>
-                    <tbody>
-                        <tr>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                        </tr>
-                        <tr>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                        </tr>
-                        <tr>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                            <td>sdfjk</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>dsafkhjhj</p>
-            </>
-        </MyModal> */}
+      {/* <MyModal modalTitle={"This is My Title"}  name={props.name}>
+        <>
+          <table className="table table-bordered">
+            <tbody>
+              <tr>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+              </tr>
+              <tr>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+              </tr>
+              <tr>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+                <td>sdfjk</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>dsafkhjhj</p>
+        </>
+      </MyModal> */}
       {/* <StateDemo1 /> */}
       {/* <ToggleDemo1 /> */}
       {/* <ToggleDemo2 /> */}
@@ -107,8 +107,8 @@ export default function Main() {
       {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
-      {/* <ProductList /> */}
-      <ToDoCRUD />
+      <ProductList />
+      {/* <ToDoCRUD /> */}
     </div>
   );
 }

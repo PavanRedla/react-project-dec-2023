@@ -104,11 +104,11 @@ export default function Main(props) {
       {/* <RemainingCharacter /> */}
       {/* <StateDropDown /> */}
       {/* <SumDemo /> */}
-      {/* <Folder folderInfo={folderData} /> */}
+      <Folder folderInfo={folderData} />
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
       {/* <ProductList /> */}
-      <ToDoCRUD />
+      {/* <ToDoCRUD /> */}
     </div>
   );
 }

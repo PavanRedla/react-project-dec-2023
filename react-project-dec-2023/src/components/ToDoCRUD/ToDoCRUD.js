@@ -22,7 +22,11 @@ export default function ToDoCRUD() {
     setToDoArr([...updatedToDos]);
   };
   let addToDo = (text, taskCompleted) => {
-    let newToDo = { id: todoArr.length + 1, text: text, completed: taskCompleted };
+    let newToDo = {
+      id: todoArr.length + 1,
+      text: text,
+      completed: taskCompleted,
+    };
     todoArr.push(newToDo);
     setToDoArr([...todoArr]);
   };

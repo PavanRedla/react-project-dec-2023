@@ -31,6 +31,11 @@ import ReactModalDemo from "../demo/ReactModalDemo";
 import ProductList from "../listItem/ProductList";
 import SumDemo from "../state/SumDemo";
 import ToDoCRUD from "../ToDoCRUD/ToDoCRUD";
+import EventDemo1 from "../Event/EventDemo1";
+import EventDemo2 from "../Event/EventDemo2";
+import EventDemo3 from "../Event/EventDemo3";
+import EventDemo4 from "../Event/EventDemo4";
+import EventDemo5 from "../Event/EventDemo5";
 
 export default function Main(props) {
   return (
@@ -104,11 +109,16 @@ export default function Main(props) {
       {/* <RemainingCharacter /> */}
       {/* <StateDropDown /> */}
       {/* <SumDemo /> */}
-      <Folder folderInfo={folderData} />
+      {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
       {/* <ProductList /> */}
       {/* <ToDoCRUD /> */}
+      {/* <EventDemo1 /> */}
+      {/* <EventDemo2 /> */}
+      {/* <EventDemo3 /> */}
+      {/* <EventDemo4 /> */}
+      <EventDemo5 />
     </div>
   );
 }

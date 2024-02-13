@@ -1115,7 +1115,7 @@ React Events
 -React event handlers are written inside curly braces
 	onClick={shoot}  instead of onClick="shoot()" 
 	<button onClick={shoot}>Take the Shot!</button>  // calls the function on click
-	<button onClick={shoot()}>Take the Shot!</button> //calls the function on load
+	<button onClick={shoot()}>Take the Shot!</button> //calls the function on page load
 -For methods in React,the 'this' keyword should represent the component that owns the method.
 -That is why we should use arrow functions. 
  With arrow functions, 'this' will always represent the object that defined the arrow function.
@@ -1128,7 +1128,7 @@ React Events
         this.f1 = this.f1.bind(this);
     }
     state = {
-        counter: 0
+        counter: 0  
     }
     f1() {
         alert("hi");
@@ -1158,11 +1158,21 @@ the shoot function will be executed when the page is loaded instead of waiting f
  
 Single Event Handler for multiple input elements	
 =================================================	
+
+// Class Component 
+
  changeHandler = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: +value });
+    this.setState({ [name]: +value }); // we are not using ...obj as class component copies all other values as it is without using ...obj.
   }; 
-  
+
+  // Functional Component 
+
+  let [obj, setObj] = useState({ num1: 0, num2: 0 });
+  const changeHandler = (e) => {
+    console.log(e.target.name, e.target.value);
+    setObj({ ...obj, [e.target.name]: +e.target.value });  // ...obj is used to copy the remaining elements as it is 
+  };
   
 
 
@@ -1174,8 +1184,29 @@ SyntheticEvent
   <button onClick={f1}>click me</button>  // bubbling
   <button onClickCapture={f1}>click me</button>  // capturing
  
- 
+ suppose the HTML tree is like:
 
+<body>
+  <p>
+    <div>
+      child
+    </div>
+  </p>
+</body>
+
+ 
+Bubbling means if we click the child most button then click event is fires with the child element then click event is triggered with parent element also. output will be like 
+child clicked
+div clicked
+para clicked
+body clicked.
+
+capturing is reverse of bubbling when we click the button in child element first the click event will  be triggered in parent most element and then it goes toward the child element . output will be like
+
+body clicked
+para clicked
+div clicked
+child clicked.
 
 
 Component Communication

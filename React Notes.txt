@@ -1209,7 +1209,7 @@ div clicked
 child clicked.
 
 
-Component Communication
+Component Communication - passing data from one component to another component is called component communication.
 =======================
 ->Parent to Child :  props
 ->Child to Parent :  callback and states

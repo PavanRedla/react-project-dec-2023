@@ -107,8 +107,8 @@ export default function Main(props) {
       {/* <Folder folderInfo={folderData} /> */}
       {/* <SweetAlertDemo /> */}
       {/* <ReactModalDemo /> */}
-      <ProductList />
-      {/* <ToDoCRUD /> */}
+      {/* <ProductList /> */}
+      <ToDoCRUD />
     </div>
   );
 }

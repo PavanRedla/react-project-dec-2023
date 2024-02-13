@@ -14,6 +14,7 @@ export default function ToDoList({ todoArr, deleteToDo, toggleToDo }) {
                 {todo.text}
               </td>
               <td>{todo.completed.toString()}</td>
+              {/* todo.completed = true/false, it is a boolean value. Boolean values are not rendered so we have to convert them to string using .toString() method */}
               <td>
                 <button
                   className="btn btn-danger m-1"

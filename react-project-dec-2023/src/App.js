@@ -7,7 +7,6 @@ import Categories from "./components/categories/Categories";
 import Carousel from "./components/carousel/Carousel";
 
 export default function App(props) {
-  console.log("I am App Component");
   return (
     <div>
       {/* <Header /> */}

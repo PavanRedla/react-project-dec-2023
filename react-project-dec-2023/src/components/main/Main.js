@@ -37,6 +37,9 @@ import EventDemo3 from "../Event/EventDemo3";
 import EventDemo4 from "../Event/EventDemo4";
 import EventDemo5 from "../Event/EventDemo5";
 import EmployeeCrud from "../EmployeeCRUD/EmployeeCrud";
+import PureDemo1 from "../state/PureDemo1";
+import PureDemo2 from "../state/PureDemo2";
+import MemoParent from "../memo/MemoParent";
 
 export default function Main(props) {
   return (
@@ -120,7 +123,10 @@ export default function Main(props) {
       {/* <EventDemo3 /> */}
       {/* <EventDemo4 /> */}
       {/* <EventDemo5 /> */}
-      <EmployeeCrud />
+      {/* <EmployeeCrud /> */}
+      {/* <PureDemo1 /> */}
+      {/* <PureDemo2 /> */}
+      <MemoParent />
     </div>
   );
 }

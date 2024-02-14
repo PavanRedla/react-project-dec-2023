@@ -1241,7 +1241,7 @@ Component vs PureComponent
 React Memo Component
 ====================
 -Introduced in React v16.6.  This improves performance.
--React.memo() is a higher-order component.
+-React.memo() is a higher-order component. i.e., it takes another component as argument
 -React.memo() can be used for both class & function components.
 -When a component is wrapped in React.memo(), React renders the component only if the props those are passed to that component changes.
 -React always re-renders the component if the state changes, even if the component is wrapped in React.memo()

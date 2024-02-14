@@ -12,7 +12,7 @@ export default function AddToDo({ addToDo }) {
     console.log(typeof e.target.value, typeof todoCompleted);
 
     setTodoCompleted(
-      e.target.value == todoCompleted.toString()
+      e.target.value === todoCompleted.toString()
         ? todoCompleted
         : !todoCompleted
     );

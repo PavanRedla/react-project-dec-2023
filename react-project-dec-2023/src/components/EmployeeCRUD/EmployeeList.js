@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function EmployeeList({ employees }) {
+export default function EmployeeList({
+  employees,
+  deleteEmployee,
+  editEmployee,
+}) {
   return (
     <>
       <table className="table table-bordered">
@@ -13,12 +17,18 @@ export default function EmployeeList({ employees }) {
                 <td>{emp.sal}</td>
                 <td>
                   <button className="btn btn-success">View</button>
-                </td>
-                <td>
-                  <button className="btn btn-primary mx-1">Edit</button>
-                </td>
-                <td>
-                  <button className="btn btn-danger">Delete</button>
+                  <button
+                    className="btn btn-primary mx-1"
+                    onClick={() => editEmployee(emp)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => deleteEmployee(emp.eId)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             );

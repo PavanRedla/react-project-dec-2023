@@ -36,6 +36,7 @@ import EventDemo2 from "../Event/EventDemo2";
 import EventDemo3 from "../Event/EventDemo3";
 import EventDemo4 from "../Event/EventDemo4";
 import EventDemo5 from "../Event/EventDemo5";
+import EmployeeCrud from "../EmployeeCRUD/EmployeeCrud";
 
 export default function Main(props) {
   return (
@@ -118,7 +119,8 @@ export default function Main(props) {
       {/* <EventDemo2 /> */}
       {/* <EventDemo3 /> */}
       {/* <EventDemo4 /> */}
-      <EventDemo5 />
+      {/* <EventDemo5 /> */}
+      <EmployeeCrud />
     </div>
   );
 }

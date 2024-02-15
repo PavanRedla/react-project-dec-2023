@@ -22,3 +22,15 @@ export default function MemoParent() {
     </>
   );
 }
+
+// when child components of the parent component are NORMAL components and if any of the state variable changes in parent component then all the child components will get re-rendered even if that particular state variable which is being changed in parent component is not passed as props to child component.
+
+// when child components of the parent component are MEMO components and if any of the state variable changes in parent component then only the child components will get re-rendered which receive that particular state variable which is being changed in parent component passed as props to that child component. Remaining child components will not get re-rendered.
+
+//  syntax to make a child component a memo component is
+
+// function ComponentA({ a }) {
+//   console.log("A Component rendered...");
+//   return <div>ComponentA - a value is {a}</div>;
+// }
+// export default React.memo(ComponentA);

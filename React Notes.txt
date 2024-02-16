@@ -1289,13 +1289,15 @@ ex:
 
 
 
-LifeCycle Hooks
+LifeCycle Hooks : are those hooks/methods/functions which are automatically called by react. we no need to call them explicitly.
 ===============
 -Every component in React goes through a lifecycle of events.
 -The three phases are: 
-	1.Mounting - (constructor,getDerivedStateFromProps,render,componentDidMount)
-	2.Updating - (getDerivedStateFromProps,shouldComponentUpdate,render, 		      getSnapshotBeforeUpdate, componentDidUpdate)
-	3.Unmounting - (componentWillUnmount)
+	1.Mounting - During mounting phase these 4 functions gets called automatically (constructor,getDerivedStateFromProps,render,componentDidMount) - when the component gets rendered for the first time is called mounting phase.
+
+	2.Updating - (getDerivedStateFromProps,shouldComponentUpdate,render, getSnapshotBeforeUpdate, componentDidUpdate) - rerendering after changes.
+
+	3.Unmounting - (componentWillUnmount) - deleting a component.
 
 
 Mounting: means putting elements into the DOM.
@@ -1398,8 +1400,7 @@ Unmounting - Removing the component from DOM
 componentWillUnmount()
 ---------------------
 -Called immediately before a component is destroyed. 
--Perform any necessary cleanup in this method, such as cancel network requests, 
- or cleaning up any DOM elements created in componentDidMount.
+-Perform any necessary cleanup in this method, such as cancel network requests, or cleaning up any DOM elements created in componentDidMount.
 -clearTimeout, ClearInterval , Unsubscribe, detachEventHandlers
 
 

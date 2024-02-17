@@ -40,6 +40,9 @@ import EmployeeCrud from "../EmployeeCRUD/EmployeeCrud";
 import PureDemo1 from "../state/PureDemo1";
 import PureDemo2 from "../state/PureDemo2";
 import MemoParent from "../memo/MemoParent";
+import LifeCycleDemo1 from "../LifeCycle/LifeCycleDemo1";
+import LifeCycleDemo2 from "../LifeCycle/LifeCycleDemo2";
+import LifeCycleDemo3 from "../LifeCycle/LifeCycleDemo3";
 
 export default function Main(props) {
   return (
@@ -126,7 +129,10 @@ export default function Main(props) {
       {/* <EmployeeCrud /> */}
       {/* <PureDemo1 /> */}
       {/* <PureDemo2 /> */}
-      <MemoParent />
+      {/* <MemoParent /> */}
+      {/* <LifeCycleDemo1  /> */}
+      {/* <LifeCycleDemo2 /> */}
+      {/* <LifeCycleDemo3 /> */}
     </div>
   );
 }

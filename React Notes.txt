@@ -1295,9 +1295,9 @@ LifeCycle Hooks : are those hooks/methods/functions which are automatically call
 -The three phases are: 
 	1.Mounting - During mounting phase these 4 functions gets called automatically (constructor,getDerivedStateFromProps,render,componentDidMount) - when the component gets rendered for the first time is called mounting phase.
 
-	2.Updating - (getDerivedStateFromProps,shouldComponentUpdate,render, getSnapshotBeforeUpdate, componentDidUpdate) - rerendering after changes.
+	2.Updating - During Updating phase these 5 functions gets called automatically  (getDerivedStateFromProps,shouldComponentUpdate,render, getSnapshotBeforeUpdate, componentDidUpdate) - rerendering the component after changes is called Updating phase.
 
-	3.Unmounting - (componentWillUnmount) - deleting a component.
+	3.Unmounting - During Unmounting phase this 1 function gets called automatically (componentWillUnmount) - deleting a component from the DOM is called unmounting phase.
 
 
 Mounting: means putting elements into the DOM.

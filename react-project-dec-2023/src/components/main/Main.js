@@ -130,8 +130,9 @@ export default function Main(props) {
       {/* <PureDemo1 /> */}
       {/* <PureDemo2 /> */}
       {/* <MemoParent /> */}
-      {/* <LifeCycleDemo1  /> */}
-      {/* <LifeCycleDemo2 /> */}
+      {/* <LifeCycleDemo1 counter={5} /> */}
+      {/* <LifeCycleDemo1 /> */}
+      <LifeCycleDemo2 />
       {/* <LifeCycleDemo3 /> */}
     </div>
   );

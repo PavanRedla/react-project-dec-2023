@@ -48,28 +48,50 @@
 
 // class component
 
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-export default class CounterDemo3 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0,
-    };
-  }
+// export default class CounterDemo3 extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       counter: 0,
+//     };
+//   }
 
-  increment = () => {
-    this.setState({ counter: this.state.counter + 1 }, () => {
-      console.log(this.state.counter);
-    });
-  }; // setState() is Asynchronous
+//   increment = () => {
+//     this.setState({ counter: this.state.counter + 1 }, () => {
+//       console.log(this.state.counter);
+//     });
+//   }; // setState() is Asynchronous
 
-  render() {
-    return (
-      <>
-        <p>Counter value is {this.state.counter}</p>
-        <button onClick={this.increment}>Increment</button>
-      </>
-    );
-  }
+//   render() {
+//     return (
+//       <>
+//         <p>Counter value is {this.state.counter}</p>
+//         <button onClick={this.increment}>Increment</button>
+//       </>
+//     );
+//   }
+// }
+
+import React, { useEffect, useRef, useState } from "react";
+
+export default function CounterDemo3() {
+  let [counter, updateCounter] = useState(0);
+  let prevValue = useRef(0);
+
+  let increment = () => {
+    updateCounter(counter + 1);
+  };
+  useEffect(() => {
+    prevValue.current = counter;
+  }, [counter]);
+  return (
+    <>
+      <p>
+        Current value - {counter} , previous Value is-{prevValue.current}
+      </p>
+      <button onClick={increment}>Increment</button>
+    </>
+  );
 }

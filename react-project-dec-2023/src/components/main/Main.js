@@ -44,6 +44,11 @@ import LifeCycleDemo1 from "../LifeCycle/LifeCycleDemo1";
 import LifeCycleDemo2 from "../LifeCycle/LifeCycleDemo2";
 import LifeCycleDemo3 from "../LifeCycle/LifeCycleDemo3";
 import LifeCycleDemo4 from "../LifeCycle/LifeCycleDemo4";
+import RefDemo1 from "../Form/RefDemo1";
+import RefDemo2 from "../Form/RefDemo2";
+import FormDemo1 from "../Form/FormDemo1";
+import FormDemo2 from "../Form/FormDemo2";
+import FormDemo3 from "../Form/FormDemo3";
 
 export default function Main(props) {
   return (
@@ -61,7 +66,7 @@ export default function Main(props) {
       {/* <CountryList /> */}
       {/* <CounterDemo1 /> */}
       {/* <CounterDemo2/> */}
-      {/* <CounterDemo3 /> */}
+      <CounterDemo3 />
       {/* <GreetDemo1 name="sanjay" msg="Good Morning">
         <div>
           In between the start and end tag of GreetDemo1 tags whatever the HTML
@@ -135,7 +140,12 @@ export default function Main(props) {
       {/* <LifeCycleDemo1 /> */}
       {/* <LifeCycleDemo2 /> */}
       {/* <LifeCycleDemo3 /> */}
-      <LifeCycleDemo4 />
+      {/* <LifeCycleDemo4 /> */}
+      {/* <RefDemo1 /> */}
+      {/* <RefDemo2 /> */}
+      {/* <FormDemo1 /> */}
+      {/* <FormDemo2 /> */}
+      <FormDemo3 />
     </div>
   );
 }

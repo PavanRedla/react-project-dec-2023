@@ -1651,7 +1651,7 @@ DELETE /employees/{id}
 Ways of Fetching Data
 =====================
 There are many ways to extract data from API in React:
-1. using Fetch API
+1. using fetch() from javascript
 2. using async-await syntax
 3. using Axios library
 4. using custom hooks

@@ -49,6 +49,11 @@ import RefDemo2 from "../Form/RefDemo2";
 import FormDemo1 from "../Form/FormDemo1";
 import FormDemo2 from "../Form/FormDemo2";
 import FormDemo3 from "../Form/FormDemo3";
+import RefForward from "../Form/RefForward";
+import PrevNewRef from "../Form/PrevNewRef";
+import FormDemo4 from "../Form/FormDemo4";
+import Multipleinputs from "../Form/Multipleinput";
+import FormDataObj from "../Form/FormDataObj";
 
 export default function Main(props) {
   return (
@@ -66,7 +71,7 @@ export default function Main(props) {
       {/* <CountryList /> */}
       {/* <CounterDemo1 /> */}
       {/* <CounterDemo2/> */}
-      <CounterDemo3 />
+      {/* <CounterDemo3 /> */}
       {/* <GreetDemo1 name="sanjay" msg="Good Morning">
         <div>
           In between the start and end tag of GreetDemo1 tags whatever the HTML
@@ -145,7 +150,12 @@ export default function Main(props) {
       {/* <RefDemo2 /> */}
       {/* <FormDemo1 /> */}
       {/* <FormDemo2 /> */}
-      <FormDemo3 />
+      {/* <FormDemo3 /> */}
+      {/* <FormDemo4 /> */}
+      {/* <RefForward /> */}
+      {/* <PrevNewRef /> */}
+      {/* <Multipleinputs/> */}
+      <FormDataObj />
     </div>
   );
 }

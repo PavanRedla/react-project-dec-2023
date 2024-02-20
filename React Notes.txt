@@ -1459,7 +1459,31 @@ Refs (Template Reference Variable)
 	 
 -'Ref forwarding' is a feature that lets some components take a ref they receive,and pass/forward it further down to a child.
 
-Q. How to 
+Q. How to print previous state and current state data in functional component using "Ref"
+
+import React, { useEffect, useRef, useState } from "react";
+
+export default function PrevNewRef() {
+  let [counter, setCounter] = useState(0);
+  let prevValue = useRef(0);
+
+  let increment = () => {
+    setCounter(counter + 1);
+  };
+
+  useEffect(() => {
+    prevValue.current = counter;
+  }, [counter]);
+
+  return (
+    <>
+      <p>
+        Current Value is - {counter}, Previous Value is - {prevValue.current}
+      </p>
+      <button onClick={increment}>Increment</button>
+    </>
+  );
+}
 
 
 Forms
@@ -1501,16 +1525,16 @@ Forms
 
 
 
-Feature									Uncontrolled		Controlled	
+Feature									                 Uncontrolled		  Controlled	
 -----------------------------------------------------------------------
 One-time value retrieval 
-(e.g. on submit)							yes					yes
-Validating on submit						yes					yes
-Field-level Validation						no					yes
-Conditionally disabling submit button		no					yes
-Enforcing input format						no					yes
-several inputs for one piece of data		no					yes
-dynamic inputs								no					yes
+(e.g. on submit)							              yes					     yes
+Validating on submit						            yes					     yes
+Field-level Validation						          no					     yes
+Conditionally disabling submit button		    no					     yes
+Enforcing input format						          no					     yes
+several inputs for one piece of data		    no					     yes
+dynamic inputs								              no					     yes
 
 
 -Uncontrolled inputs are like traditional HTML form inputs.
@@ -1524,7 +1548,7 @@ dynamic inputs								no					yes
 
 
 -Controlled form components are defined with a value property. 
--value of controlled input is managed by React, 
+-value of controlled input is managedT by React, 
 -With a controlled component, the input’s value is always driven by the React state.
 -component state and the input value is in sync at all the times.
  <input onChange={this.onChange} value={this.state.name} />

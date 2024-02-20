@@ -37,7 +37,7 @@ export default function FormDataObj() {
         <button>Submit</button>
       </form>
       <p>
-        {userObj.fname} {userObj.lname} is {userObj.age} years old staying at{" "}
+        {userObj.fname} {userObj.lname} is {userObj.age} years old, staying at{" "}
         {userObj.address}
       </p>
     </>

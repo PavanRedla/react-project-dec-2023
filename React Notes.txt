@@ -1558,22 +1558,85 @@ dynamic inputs								              no					     yes
 
 HTTP Methods
 ============
-GET - Retrieve a resource/Retrieve data from DB
+GET - Retrieve a resource/Retrieve data from DB (Database)
 	  search
 	  
 POST - to send data to server  ( sign up ) 
-       (create a resource/create a new record in DB)
+    (create a resource/create a new record in DB) - create a new record in the file.
 	   to fetch data securly    (send params in body not in URL)
 
-PUT - update data/create or replace a resource  
-	  update user's profile information 
-	  
-PATCH - update/modify a particular resource(partial update)
-        update user password
+PUT - update data/create or replace a resource   - recommended to use when we want to update the entire record or column
+	   e.g: update user's profile information 
+
+     	  
+PATCH - update/modify a particular resource(partial update) - recommended to use when we want to update the particular column in a record or one key in a record.
+       e.g:  update user password
 
 DELETE - Remove a resource/delete a record from DB 
-		 Delete naukri account
-		 
+		e.g:  Delete naukri account
+
+IMPLEMENT GET Method
+=====================
+
+download postman app
+create .json file 
+
+open the cmd in .json file location
+type this command - json-server --watch db.json --port=4000
+then we will get the link at endpoint - copy the link and paste it in postman, select Get option and click send then we can see the result in Body.
+
+IMPLEMENT POST METHOD
+=====================
+
+change the option to POST and select Body and then select raw and then select json type 
+
+paste the link generated in cmd at End points - json-server --watch db.json --port=4000
+
+Type the new data we want to enter in the below box as shown below and then click SEND  then it says 201 created. Now check the json file in notepad++.
+
+ {
+      "id": 5,
+      "name": "Sanjay samantra",
+      "email": "fafafafadf@gmail.com",
+      "number": "9898394884"
+    }
+
+then the new data we entered gets added into the json file which we have opened in the notepad++
+
+
+IMPLEMENT PUT METHOD
+=====================
+
+change the option to PUT and select Body and then select raw and then select json type 
+
+paste the link generated in cmd at End points - json-server --watch db.json --port=4000
+
+Type the new entire column data we want to enter in the below box as shown below and then click SEND 
+
+then the new data we entered gets added into the json file which we have opened in the notepad++
+
+IMPLEMENT PATCH METHOD
+=====================
+
+change the option to PATCH and select Body and then select raw and then select json type 
+
+paste the link generated in cmd at End points - json-server --watch db.json --port=4000
+
+Type the new column data we want to enter in the below box as shown below and then click SEND 
+
+then the new data we entered gets added into the json file which we have opened in the notepad++
+
+IMPLEMENT DELETE METHOD
+=====================
+
+change the option to DELETE and select Body and then select raw and then select json type 
+
+paste the link generated in cmd at End points - json-server --watch db.json --port=4000
+
+then click SEND 
+
+then the new data we entered gets deleted from the json file which we have opened in the notepad++
+
 
 PUT vs POST
 -----------
@@ -1591,7 +1654,39 @@ PUT vs PATCH
 -PUT is used to replace an existing resource. 
 -PATCH is used to apply partial modifications to a resource.
 	
-	
+Because suppose if we have an object like this
+
+user {
+  name: sanjay,
+  age: 23;
+  sal: 2000,
+}
+
+if we want to update the sal - 2000 to 5000 then we can use both PATCH and PUT 
+
+PATCH:
+
+go to the URL - https:/jsondata/user1 and copy the URL and paste it in postman. select PATCH and 
+
+sal: 5000
+
+and hit send then it will update the sal feild in user object
+
+whereas, if we do PUT operation for the same then user object contains only sal field as shown below and remaining all feilds gets delted.
+
+user {
+  sal: 6000;
+}
+
+Note: 
+
+PUT - update data/create or replace a resource   - recommended to use when we want to update the entire record or column
+	   e.g: update user's profile information 
+
+     	  
+PATCH - update/modify a particular resource(partial update) - recommended to use when we want to update the particular column in a record or one key in a record.
+       e.g:  update user password
+
 	
 http status codes
 =================

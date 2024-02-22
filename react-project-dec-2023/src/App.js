@@ -5,8 +5,17 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Categories from "./components/categories/Categories";
 import Carousel from "./components/carousel/Carousel";
+import {
+  myInterceptor1,
+  requestStartedInterceptor,
+  responseReceivedInterceptor,
+} from "./utils/MyInterceptor1";
 
 export default function App(props) {
+  myInterceptor1();
+  // requestStartedInterceptor();
+  // responseReceivedInterceptor();
+
   return (
     <div>
       {/* <Header /> */}

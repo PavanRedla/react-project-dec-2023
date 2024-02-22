@@ -54,6 +54,12 @@ import PrevNewRef from "../Form/PrevNewRef";
 import FormDemo4 from "../Form/FormDemo4";
 import Multipleinputs from "../Form/Multipleinput";
 import FormDataObj from "../Form/FormDataObj";
+import ProductFetch from "../HTTP/ProductFetch";
+import HttpDemo1 from "../HTTP/HttpDemo1";
+import HttpDemo2 from "../HTTP/HttpDemo2";
+import HttpDemo3 from "../HTTP/HttpDemo3";
+import HttpDemo4 from "../HTTP/HttpDemo4";
+import HttpDemo5 from "../HTTP/HttpDemo5";
 
 export default function Main(props) {
   return (
@@ -155,7 +161,13 @@ export default function Main(props) {
       {/* <RefForward /> */}
       {/* <PrevNewRef /> */}
       {/* <Multipleinputs/> */}
-      <FormDataObj />
+      {/* <FormDataObj /> */}
+      {/* <ProductFetch /> */}
+      {/* <HttpDemo1 /> */}
+      {/* <HttpDemo2 /> */}
+      <HttpDemo3 />
+      <HttpDemo4 />
+      <HttpDemo5 />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FormDataObjStyle.css";
+// import "./FormDataObjStyle.css";
 
 export default function FormDataObj() {
   const stateNames = [
@@ -75,7 +75,6 @@ export default function FormDataObj() {
       <p>
         {userObj.fname} {userObj.lname} is {userObj.age} years old, staying at{" "}
         {userObj.address} in {userObj.state}
-        
       </p>
     </>
   );

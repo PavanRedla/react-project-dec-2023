@@ -29,40 +29,46 @@ export default function ProductFetch() {
 
   return (
     <>
-      <div className="container text-center">
-        <div className="row">
-          {productsa.map((product) => {
-            return (
-              <div className="col-md-3" key={product.id}>
-                <div className="card">
-                  <img
-                    src={product.image}
-                    className="card-img-top"
-                    style={{ height: "200px" }}
-                    alt="something"
-                  />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{product.category}</h5>
-                    <p
-                      className="card-text text-truncate"
-                      title={product.description}
-                    >
-                      {product.description}
-                    </p>
-                    <p
-                      className="card-text text-truncate"
-                      title={product.price}
-                    >
-                      {product.price}
-                    </p>
-                    <button className="btn btn-primary">Buy Now</button>
+      {isLoading ? (
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      ) : (
+        <div className="container text-center">
+          <div className="row">
+            {productsa.map((product) => {
+              return (
+                <div className="col-md-3" key={product.id}>
+                  <div className="card">
+                    <img
+                      src={product.image}
+                      className="card-img-top"
+                      style={{ height: "200px" }}
+                      alt="something"
+                    />
+                    <div className="card-body text-center">
+                      <h5 className="card-title">{product.category}</h5>
+                      <p
+                        className="card-text text-truncate"
+                        title={product.description}
+                      >
+                        {product.description}
+                      </p>
+                      <p
+                        className="card-text text-truncate"
+                        title={product.price}
+                      >
+                        {product.price}
+                      </p>
+                      <button className="btn btn-primary">Buy Now</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

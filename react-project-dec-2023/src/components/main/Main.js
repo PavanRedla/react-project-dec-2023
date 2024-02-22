@@ -162,12 +162,12 @@ export default function Main(props) {
       {/* <PrevNewRef /> */}
       {/* <Multipleinputs/> */}
       {/* <FormDataObj /> */}
-      <ProductFetch />
+      {/* <ProductFetch /> */}
       {/* <HttpDemo1 /> */}
       {/* <HttpDemo2 /> */}
       {/* <HttpDemo3 /> */}
       {/* <HttpDemo4 /> */}
-      {/* <HttpDemo5 /> */}
+      <HttpDemo5 />
     </div>
   );
 }

@@ -62,6 +62,8 @@ import HttpDemo4 from "../HTTP/HttpDemo4";
 import HttpDemo5 from "../HTTP/HttpDemo5";
 import ClickCounter from "../HOC/ClickCounter";
 import HoverCounter from "../HOC/HoverCounter";
+import CounterHOC from "../HOC/CounterHOC";
+import LoggerHOC from "../HOC/LoggerHOC";
 
 export default function Main(props) {
   return (
@@ -168,10 +170,12 @@ export default function Main(props) {
       {/* <HttpDemo1 /> */}
       {/* <HttpDemo2 /> */}
       {/* <HttpDemo3 /> */}
-      {/* <HttpDemo4 /> */}
+      <HttpDemo4 />
       {/* <HttpDemo5 /> */}
-      <ClickCounter />
-      <HoverCounter />
+      {/* <ClickCounter /> */}
+      {/* <HoverCounter /> */}
+      {/* <CounterHOC/> */}
+      <LoggerHOC/>
     </div>
   );
 }

@@ -13,8 +13,8 @@ import {
 
 export default function App(props) {
   myInterceptor1();
-  // requestStartedInterceptor();
-  // responseReceivedInterceptor();
+  requestStartedInterceptor();
+  responseReceivedInterceptor();
 
   return (
     <div>

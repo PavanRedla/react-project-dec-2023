@@ -175,7 +175,7 @@ export default function Main(props) {
       {/* <ClickCounter /> */}
       {/* <HoverCounter /> */}
       {/* <CounterHOC/> */}
-      <LoggerHOC/>
+      <LoggerHOC />
     </div>
   );
 }

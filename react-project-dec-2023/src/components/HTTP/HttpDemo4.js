@@ -49,4 +49,5 @@ function HttpDemo4() {
     </>
   );
 }
-export default LoggerHOC(HttpDemo4);
+// export HttpDemo4; // This is calling only HttpDemo4
+export default LoggerHOC(HttpDemo4); // if we want to use LoggerHoc mechanism for this component then we have to call like this.

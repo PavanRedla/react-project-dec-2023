@@ -21,6 +21,7 @@ export default function EmployeeList({
           {employees.map((emp) => {
             return (
               <tr key={emp.id}>
+                <td>{emp.id}</td>
                 <td>{emp.name}</td>
                 <td>{emp.username}</td>
                 <td>{emp.email}</td>

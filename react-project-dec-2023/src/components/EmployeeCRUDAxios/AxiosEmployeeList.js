@@ -20,10 +20,10 @@ export default function EmployeeList({
         <tbody>
           {employees.map((emp) => {
             return (
-              <tr key={emp.eId}>
-                <td>{emp.eId}</td>
+              <tr key={emp.id}>
                 <td>{emp.name}</td>
-                <td>{emp.sal}</td>
+                <td>{emp.username}</td>
+                <td>{emp.email}</td>
                 <td>
                   <button className="btn btn-success" onClick={openModal}>
                     View
@@ -38,10 +38,10 @@ export default function EmployeeList({
                         <tbody>
                           {employees.map((empObj) => {
                             return (
-                              <tr key={empObj.eId}>
-                                <td>{empObj.eId}</td>
+                              <tr key={empObj.id}>
                                 <td>{empObj.name}</td>
-                                <td>{empObj.sal}</td>
+                                <td>{empObj.username}</td>
+                                <td>{empObj.email}</td>
                               </tr>
                             );
                           })}
@@ -61,7 +61,7 @@ export default function EmployeeList({
                   </button>
                   <button
                     className="btn btn-danger"
-                    onClick={() => deleteEmployee(emp.eId)}
+                    onClick={() => deleteEmployee(emp.id)}
                   >
                     Delete
                   </button>

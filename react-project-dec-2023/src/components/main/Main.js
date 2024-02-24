@@ -64,6 +64,7 @@ import ClickCounter from "../HOC/ClickCounter";
 import HoverCounter from "../HOC/HoverCounter";
 import CounterHOC from "../HOC/CounterHOC";
 import LoggerHOC from "../HOC/LoggerHOC";
+import AxiosEmployeeCrud from "../EmployeeCRUDAxios/AxiosEmployeeCrud";
 
 export default function Main(props) {
   return (
@@ -170,12 +171,13 @@ export default function Main(props) {
       {/* <HttpDemo1 /> */}
       {/* <HttpDemo2 /> */}
       {/* <HttpDemo3 /> */}
-      <HttpDemo4 />
+      {/* <HttpDemo4 /> */}
       {/* <HttpDemo5 /> */}
       {/* <ClickCounter /> */}
       {/* <HoverCounter /> */}
       {/* <CounterHOC/> */}
-      <LoggerHOC />
+      {/* <LoggerHOC /> */}
+      {/* <AxiosEmployeeCrud /> */}
     </div>
   );
 }

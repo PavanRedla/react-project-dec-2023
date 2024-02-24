@@ -177,7 +177,7 @@ export default function Main(props) {
       {/* <HoverCounter /> */}
       {/* <CounterHOC/> */}
       {/* <LoggerHOC /> */}
-      {/* <AxiosEmployeeCrud /> */}
+      <AxiosEmployeeCrud />
     </div>
   );
 }

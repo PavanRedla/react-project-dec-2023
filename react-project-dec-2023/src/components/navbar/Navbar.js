@@ -91,6 +91,8 @@
 // }
 
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
@@ -113,24 +115,68 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              {/* <a className="nav-link active" aria-current="page" href="#">
                 Home
-              </a>
+              </a> */}
+
+              {/* <Link className="nav-link" to="/home">
+                Home
+              </Link> */}
+              {/* -When we use <Link> there isn't any active class on selected element.
+               -with <NavLink> the selected element is highlighted because this element adds an active class.
+                -add below css: 
+	                nav a.active{text-decoration:none;font-weight:bolder;background-color: aqua} */}
+
+              <NavLink className="nav-link" to="/home">
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              {/* <a className="nav-link active" aria-current="page" href="#">
                 AboutUs
-              </a>
+              </a> */}
+
+              {/* <Link className="nav-link" to="/aboutus">
+                About-Us
+              </Link> */}
+
+              <NavLink className="nav-link" to="/aboutus">
+                About-Us
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              {/* <a className="nav-link active" aria-current="page" href="#">
                 Careers
-              </a>
+              </a> */}
+
+              {/* <Link className="nav-link" to="/careers">
+                Careers
+              </Link> */}
+
+              <NavLink className="nav-link" to="/careers">
+                Careers
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              {/* <a className="nav-link active" aria-current="page" href="#">
                 ContactUs
-              </a>
+              </a> */}
+
+              {/* <Link className="nav-link" to="/contactus">
+                Contact Us
+              </Link> */}
+              <NavLink className="nav-link" to="/contactus">
+                Contact Us
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              {/* <Link className="nav-link" to="/products">
+                Products
+              </Link> */}
+
+              <NavLink className="nav-link" to="/products">
+                Products
+              </NavLink>
             </li>
           </ul>
           <form className="d-flex">

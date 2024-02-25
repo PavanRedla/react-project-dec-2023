@@ -6,13 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { BrowserRouter } from "react-router-dom";
 
 let name = "SANJAY SAMANTRA";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-    <App name={name} />
+    <BrowserRouter>
+      <App name={name} /> 
+    </BrowserRouter>
+    {/* After importing BrowserRouter from react-dom-router and keeping the app component inside App component, Routing will work in App component and Routing will work in all the components present in App component  */}
   </StrictMode>
 );
 

@@ -1957,7 +1957,7 @@ Steps for Routing
    npm install react-router-dom   
 2. Create Components
    create components like - (Home,About,Contact,NotFound)   
-3. set up the application to work with React Router. (index.js)
+3. set up the application to work with React Router in (index.js) or App.js
    import { BrowserRouter } from 'react-router-dom';	
    <BrowserRouter>
         <App />
@@ -1971,7 +1971,7 @@ Steps for Routing
         <Route exact path="/products" element={<Products />} />
         <Route path="*" element={<NotFound />} /> (No Match Route)
     </Routes>	
-5. Add a Link for each component and use to="URL" to link them.
+5. Add a Link for each component and use to="URL" to link them in Navbar component.
    <div>
       <Link to="/">Home </Link>
       <Link to="/about">About Us </Link>

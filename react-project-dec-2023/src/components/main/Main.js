@@ -65,6 +65,14 @@ import HoverCounter from "../HOC/HoverCounter";
 import CounterHOC from "../HOC/CounterHOC";
 import LoggerHOC from "../HOC/LoggerHOC";
 import AxiosEmployeeCrud from "../EmployeeCRUDAxios/AxiosEmployeeCrud";
+import EmpToDoCrudAxios from "../EmployeeCRUDAxios/EmpToDoCrudAxios";
+
+import { Routes, Route } from "react-router-dom";
+import Home from "../Routing/Home";
+import AboutUs from "../Routing/AboutUs";
+import Careers from "../Routing/Careers";
+import ContactUs from "../Routing/ContactUs";
+import NotFound from "../Routing/NotFound";
 
 export default function Main(props) {
   return (
@@ -177,7 +185,18 @@ export default function Main(props) {
       {/* <HoverCounter /> */}
       {/* <CounterHOC/> */}
       {/* <LoggerHOC /> */}
-      <AxiosEmployeeCrud />
+      {/* <AxiosEmployeeCrud /> */}
+      {/* <EmpToDoCrudAxios /> */}
+
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/aboutus" element={<AboutUs />} />
+        <Route exact path="/careers" element={<Careers />} />
+        <Route exact path="/contactus" element={<ContactUs />} />
+        <Route exact path="*" element={<NotFound />} />
+        <Route exact path="/products" element={<ProductList />} />
+      </Routes>
     </div>
   );
 }

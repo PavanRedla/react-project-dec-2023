@@ -11,7 +11,7 @@ export default function Crud() {
 
   const fetchUsers = async function () {
     let response = await axios.get("http://localhost:4000/users");
-    setUsers(response.data);
+    setUsers(...response.data);
   };
   const addUser = async function () {
     const newUser = {

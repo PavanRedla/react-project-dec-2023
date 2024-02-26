@@ -2032,8 +2032,8 @@ const navigate = useNavigate();
 
 Route Params
 ============
-1. Path params    (productdetails/101)
-2. Query Params   (search?name=sachin&age=25)
+1. Path params    (productdetails/101) // after the route number will be there in path parameter
+2. Query Params   (search?name=sachin&age=25) // after the route (search) ? and key vale pair will be there in query parameter
 
 
 Path Params

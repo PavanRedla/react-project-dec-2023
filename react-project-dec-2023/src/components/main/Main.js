@@ -186,7 +186,7 @@ export default function Main(props) {
       {/* <CounterHOC/> */}
       {/* <LoggerHOC /> */}
       {/* <AxiosEmployeeCrud /> */}
-      {/* <EmpToDoCrudAxios /> */}
+      <EmpToDoCrudAxios />
 
       <Routes>
         <Route exact path="/" element={<Home />} />

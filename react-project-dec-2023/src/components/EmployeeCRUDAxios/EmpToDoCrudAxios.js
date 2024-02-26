@@ -7,36 +7,28 @@ export default function Crud() {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [username, setUserName] = useState("");
+  const [number, setNumber] = useState("");
 
   const fetchUsers = async function () {
-    let response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
-    );
+    let response = await axios.get("http://localhost:4000/users");
     setUsers(response.data);
   };
   const addUser = async function () {
     const newUser = {
+      id: id,
       name: name,
       email: email,
-      phone: phone,
-      username: username,
+      number: number,
     };
-    let response = await axios.post(
-      "https://jsonplaceholder.typicode.com/users",
-      newUser
-    );
+    let response = await axios.post("http://localhost:4000/users", newUser);
     Swal.fire("Employee Added Successfully", "", "success");
     fetchUsers();
   };
   const deleteUser = (id) => {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((res) => {
-        Swal.fire("Employee Deleted Successfully", "", "success");
-        fetchUsers();
-      });
+    axios.delete(`http://localhost:4000/users/${id}`).then((res) => {
+      Swal.fire("Employee Deleted Successfully", "", "success");
+      fetchUsers();
+    });
   };
   const editUser = (id) => {};
   const mySubmitHandler = function (event) {
@@ -60,11 +52,10 @@ export default function Crud() {
             <table className="table table-bordered table-striped table-responsive">
               <thead>
                 <tr>
-                  <th>id</th>
+                  <th>Id</th>
                   <th>Name</th>
-                  <th>email</th>
-                  <th>phone</th>
-                  <th>username</th>
+                  <th>Email</th>
+                  <th>Number</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -75,8 +66,7 @@ export default function Crud() {
                       <td>{user.id}</td>
                       <td>{user.name}</td>
                       <td>{user.email}</td>
-                      <td>{user.phone}</td>
-                      <td>{user.username}</td>
+                      <td>{user.number}</td>
                       <td>
                         <button
                           className="btn btn-danger"
@@ -107,6 +97,14 @@ export default function Crud() {
           <div className="col-sm-2">
             <h2 className="text-center">User List</h2>
             <form onSubmit={mySubmitHandler}>
+              id:{" "}
+              <input
+                name="id"
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+              />
+              <br />
+              <br />
               Name:{" "}
               <input
                 name="name"
@@ -123,20 +121,12 @@ export default function Crud() {
               />{" "}
               <br />
               <br />
-              phone:{" "}
+              Number:{" "}
               <input
-                name="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                name="number"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
               />{" "}
-              <br />
-              <br />
-              username:{" "}
-              <input
-                name="username"
-                value={username}
-                onChange={(e) => setUserName(e.target.value)}
-              />
               <br />
               <br />
               <button className="btn btn-primary">Add Employee</button>

@@ -2032,8 +2032,8 @@ const navigate = useNavigate();
 
 Route Params
 ============
-1. Path params    (productdetails/101) // after the route number will be there in path parameter
-2. Query Params   (search?name=sachin&age=25) // after the route (search) ? and key vale pair will be there in query parameter
+1. Path params    (productdetails/101) // after the route if there is /number then it is called  path parameter
+2. Query Params   (search?name=sachin&age=25) // after the route, (search) ? and key vale pair will be there in query parameter
 
 
 Path Params
@@ -2048,7 +2048,7 @@ Path Params
    
    
    
-Query params
+Query params  : we can pass more parameter using Query parameter
 ------------
 1. configure the route
    <Route path="/productdetails" element={<ProductDetails />} />
@@ -2120,7 +2120,7 @@ Replace
 -replaces the current location instead of pushing a new one onto the browser history stack
 <Navigate to="/home" replace />
 	  (OR)
-navigate(to, { replace: true })
+navigate("/home", { replace: true })
 
 
 Exact

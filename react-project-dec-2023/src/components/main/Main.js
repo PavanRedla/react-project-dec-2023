@@ -77,6 +77,9 @@ import Products from "../Routing/Products";
 import ProductDetails from "../Routing/ProductDetails";
 import Users from "../Routing/Users";
 import UserDetails from "../Routing/UserDetails";
+import PermanentJobs from "../Routing/PermanentJobs";
+import ContractJobs from "../Routing/ContractJobs";
+import ProtectedRoute from "../Routing/ProtectedRoute";
 
 export default function Main(props) {
   return (
@@ -196,12 +199,38 @@ export default function Main(props) {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/aboutus" element={<AboutUs />} />
-        <Route exact path="/careers" element={<Careers />} />
+        <Route exact path="/careers" element={<Careers />}>
+          <Route index element={<PermanentJobs />} />
+          {/* if we want to make the permanent Jobs component gets loaded when Career component is loaded then we have to use Index Route as shown above. */}
+
+          {/* if we place route of one component in another component the those routes are called child components. Permanent jobs and contract jobs are child components of Careers component */}
+          <Route path="permanent" element={<PermanentJobs />} />
+          <Route path="contract" element={<ContractJobs />} />
+        </Route>
         <Route exact path="/contactus" element={<ContactUs />} />
         <Route exact path="*" element={<NotFound />} />
-        <Route exact path="/products" element={<Products />} />
+
+        <Route
+          exact
+          path="/products"
+          element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          }
+        />
+        {/* Suppose if we want to make the product only accessible to the user whose role is admin then we can protect it using Protected Route by throwing an alert and route the user back to Home page. */}
+
         <Route path="/productdetails/:id" element={<ProductDetails />} />
-        <Route path="/users" element={<Users />} />
+        <Route
+          exact
+          path="/users"
+          element={
+            <ProtectedRoute>
+              <Users />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/userdetails" element={<UserDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

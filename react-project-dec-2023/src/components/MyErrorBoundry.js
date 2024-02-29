@@ -15,6 +15,8 @@ export default class MyErrorBoundry extends Component {
     // Catch errors in any components below and re-render with error message
     console.log(error, errorInfo);
     // You can also log error messages to an error reporting service here
+    // if you have a common file to render error we can call that component by passing these error and errorInfo
+    // logErrorToMyService(error, errorInfo);
   }
 
   render() {

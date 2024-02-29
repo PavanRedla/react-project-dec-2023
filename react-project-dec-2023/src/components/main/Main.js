@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { FaBeer, FaTrash, FaTrashAlt, FaTrashRestore } from "react-icons/fa";
 import Increment from "../increment/Increment";
 import EvenOdd from "../EvenOdd/EvenOdd";
@@ -73,13 +73,15 @@ import AboutUs from "../Routing/AboutUs";
 import Careers from "../Routing/Careers";
 import ContactUs from "../Routing/ContactUs";
 import NotFound from "../Routing/NotFound";
-import Products from "../Routing/Products";
+// import Products from "../Routing/Products";
 import ProductDetails from "../Routing/ProductDetails";
-import Users from "../Routing/Users";
+// import Users from "../Routing/Users";
 import UserDetails from "../Routing/UserDetails";
 import PermanentJobs from "../Routing/PermanentJobs";
 import ContractJobs from "../Routing/ContractJobs";
 import ProtectedRoute from "../Routing/ProtectedRoute";
+const Products = React.lazy(() => import("../Routing/Products"));
+const Users = React.lazy(() => import("../Routing/Users"));
 
 export default function Main(props) {
   return (
@@ -215,7 +217,10 @@ export default function Main(props) {
           path="/products"
           element={
             <ProtectedRoute>
-              <Products />
+              <Suspense fallback={<div>Loading Products...</div>}>
+                <Products />
+              </Suspense>
+              {/* suspense is used to display some message until the products components gets lazy loaded. annd products is lazy loading componet as we import it using dyanmaic import and not eager import*/}
             </ProtectedRoute>
           }
         />
@@ -227,7 +232,9 @@ export default function Main(props) {
           path="/users"
           element={
             <ProtectedRoute>
-              <Users />
+              <Suspense fallback={<div>Loading User Details...</div>}>
+                <Users />
+              </Suspense>
             </ProtectedRoute>
           }
         />

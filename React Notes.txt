@@ -2129,7 +2129,17 @@ Exact
 	
 	
 	
-	
+ // if we want to send project to any other person then we have to reduce the size of our folder using build
+
+to create build project first we need to go to project location and open cmd prompt and run this command - npm run build
+
+C:\Users\predla\Downloads\React-Dec-2023-Practice\react-project-dec-2023> npm run build
+
+then build folder will get created and that build folder will have very less size compared to original file.
+
+and this build file contains one main file and that main file contains all the components to be loaded. if we keep more componets in main file then main file loads slowly which may effect user interaction while using the website.
+
+In order to reduce the size of main file we have to use code splitting concept in which we load some components only when the user clicks it and these components will not exist in main bundle. This approach is possible using lazy loading. These lazy load components will get another new bundles.
 	
 
 Code Splitting/Lazy Loading
@@ -2146,13 +2156,27 @@ Code Splitting/Lazy Loading
  <Suspense fallback={<div>Loading...</div>}>
      <OtherComponent />
  </Suspense>
- 
 
 
+Q. What are the ways to handle errors in react application.
+
+Ans: 1. try-Catch     2. Error boundary
+
+When to Use try-Catch
+---------------------
+
+- To handle errors in specific blocks of code.
+
+eg: try{
+        axios.get()
+      }catch(){
+
+      }
+- To handle errors in event handlers.
+- To handle errors in server-side rendering.
 
 
-
-Error Boundaries
+Error Boundaries : Functional component doesnot have error boundary
 ================
 -A JavaScript error in a part of the UI shouldn’t break the whole app. 
  To solve this problem, React 16 introduced a new concept  “error boundary”
@@ -2167,8 +2191,6 @@ Error Boundaries
 -Error boundaries only catch errors in the components below them in the tree. 
  An error boundary can’t catch an error within itself.
 -We can use static getDerivedStateFromError() to render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
-
-
 
 
 
@@ -2230,6 +2252,7 @@ package.json vs package-lock.json
 -in package.json (~) tells go up to hot-fixes 1.4.X if 1.4.1 is installed
  in package.json (^) checks if there is a newer version under 1.x.x if 1.4.1 is installed in package-lock.json - there is neither ~ nor ^
 -Package-lock.json maintains the Peer-dependencies.
+
 
 
 

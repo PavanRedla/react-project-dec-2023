@@ -2213,23 +2213,27 @@ Deploy in a Local Server
  2. go to project(build) folder, open command prompt and run the below command
     'serve'  or  'serve -l 7000'
 
-	
-
-
 
 Generated Files:
 	main.[hash].js  -  	This is your application code
-    [number].[hash].chunk.js  -  vendor code
+    [number].[hash].chunk.js  -  vendor code // bootstarp code or any third party library code.
 	runtime-main.[hash].js  -   webpack runtime logic which is used to load and run your application
 
+Deploy Applica in Server
+========================
+-AWS
+-Azure
+-Firebase
+-GithubPages
+-Netlify
+-Heroku
+-Vercel
 
 
 Deploy React in GitHub
 ======================
 https://create-react-app.dev/docs/deployment/#github-pages	
 	
-
-
 
 WebPack
 -------

@@ -2210,6 +2210,8 @@ Deploy in a Local Server
 -Install a server and deploy our project
  1. install a server
 	npm i -g serve 
+   g means global, serve means server name
+
  2. go to project(build) folder, open command prompt and run the below command
     'serve'  or  'serve -l 7000'
 
@@ -2233,7 +2235,12 @@ Deploy Applica in Server
 Deploy React in GitHub
 ======================
 https://create-react-app.dev/docs/deployment/#github-pages	
-	
+
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -b main -d build"
+// -b means branch, -d means deploy, this line deploys build project in git hub pages.
+
 
 WebPack
 -------
